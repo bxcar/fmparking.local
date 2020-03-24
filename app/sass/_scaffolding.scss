@@ -1,0 +1,63 @@
+
+@font-face {
+  font-family: "CeraRoundPro-Thin";
+  src: url("/fonts/CeraRoundPro-Thin.otf");
+}
+
+@font-face {
+  font-family: "CeraRoundPro-Light";
+  src: url("/fonts/CeraRoundPro-Light.otf");
+}
+
+@font-face {
+  font-family: "CeraRoundPro-Regular";
+  src: url("/fonts/CeraRoundPro-Regular.otf");
+}
+
+@font-face {
+  font-family: "CeraRoundPro-Medium";
+  src: url("/fonts/CeraRoundPro-Medium.otf");
+}
+
+@font-face {
+  font-family: "CeraRoundPro-Bold";
+  src: url("/fonts/CeraRoundPro-Bold.otf");
+}
+
+@font-face {
+  font-family: "CeraRoundPro-Black";
+  src: url("/fonts/CeraRoundPro-Black.otf");
+}
+
+
+body, html {
+  padding: 0;
+  margin: 0;
+  font-family: "CeraRoundPro-Regular", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 2;
+}

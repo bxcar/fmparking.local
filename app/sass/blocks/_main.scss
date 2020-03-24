@@ -1,0 +1,80 @@
+.main__header {
+  position: absolute;
+  z-index: 3;
+  top: 22px;
+  height: 114px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header__address {
+  display: flex;
+  align-items: center;
+  margin-right: 180px;
+  font-family: "CeraRoundPro-Regular", sans-serif;
+  font-size: 23px;
+  line-height: 1.2em;
+  color: #ffffff;
+
+  & img {
+    margin-right: 17px;
+  }
+}
+
+.header__phone {
+  display: flex;
+  align-items: center;
+  font-family: "CeraRoundPro-Regular", sans-serif;
+  font-size: 23px;
+  line-height: 1.2em;
+  color: #ffffff;
+  text-decoration: none;
+
+  & img {
+    margin-right: 17px;
+  }
+}
+
+.main__footer {
+  position: absolute;
+  z-index: 1;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main__copyright {
+  font-family: "CeraRoundPro-Thin", sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #ffffff;
+}
+
+.main__developer {
+  font-family: "CeraRoundPro-Thin", sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #ffffff;
+
+  & a {
+    color: #fff;
+  }
+}
+
+.main__header-inner-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.main__image img {
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 100vh;
+  object-fit: cover;
+}
