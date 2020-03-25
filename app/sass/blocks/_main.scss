@@ -1,6 +1,6 @@
 .main__header {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   top: 22px;
   height: 114px;
   display: flex;
@@ -70,11 +70,11 @@
   align-items: center;
 }
 
-.main__image {
+/*.main__image {
   height: 100vh;
-  background: #1e2e42;
+  background: #4f77aa;
   z-index: 3;
-}
+}*/
 
 .main__image img {
   z-index: 3;
@@ -82,15 +82,25 @@
   max-width: 100%;
   position: absolute;
   bottom: 0;
-  //height: 100vh;
-  //object-fit: cover;
 }
 
 .main__image .main__image-img {
   z-index: 1;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .main__image .main__image-img-hidden {
   z-index: 4;
   opacity: 0;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.main__img-overlays img {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  height: 100vh;
+  object-fit: cover;
 }
