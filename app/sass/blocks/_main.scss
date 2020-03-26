@@ -70,12 +70,6 @@
   align-items: center;
 }
 
-/*.main__image {
-  height: 100vh;
-  background: #4f77aa;
-  z-index: 3;
-}*/
-
 .main__image img {
   z-index: 3;
   width: 100%;
@@ -103,4 +97,54 @@
   opacity: 0;
   height: 100vh;
   object-fit: cover;
+}
+
+.main__img-title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: baseline;
+  margin-top: -150px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.level-number {
+  font-family: "RussoOne", sans-serif;
+  font-size: 194px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.level-title {
+  font-family: "RussoOne", sans-serif;
+  font-size: 38px;
+  line-height: 25px;
+  color: #ffb709;
+}
+
+.level-divider {
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 35px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.level-places-amount {
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 55px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-right: 12px;
+}
+
+.level-places-amount-title {
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 27px;
+  line-height: 25px;
+  color: #ffb709;
 }

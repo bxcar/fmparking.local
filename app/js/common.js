@@ -15,71 +15,55 @@ $(document).ready(function() {
 
         // console.log(px+","+py);
 
-        if(py > 460 && py <= 530) {
+        function hideElements() {
             $(".main__img-overlays img").css({
                 "transition": "visibility 0.3s, opacity 0.3s linear",
                 "opacity": "0",
                 "visibility": "hidden"
             });
-            $(".main__img-overlays img.level-5").css({
+            $(".main__img-title").css({
+                "transition": "visibility 0.3s, opacity 0.3s linear",
+                "opacity": "0",
+                "visibility": "hidden"
+            });
+        }
+
+        function showElements(element) {
+            $(".main__img-overlays img.level-" + element).css({
+                "transition": "visibility 0.3, opacity 0.3s linear",
+                "opacity": "1",
+                "visibility": "visible"
+            });
+            $(".main__img-title-level" + element).css({
                 "transition": "visibility 0.3, opacity 0.3s linear",
                 "opacity": "1",
                 "visibility": "visible"
             });
             $("body").css('cursor', 'pointer');
             $(".main__footer").css('z-index', '2');
+            $(".main__img-title").css('left', x).css('top', y);
+            if(x > (cw-650)) {
+                $(".main__img-title").css('left', cw-650).css('top', y);
+            }
             // $(".main__image").css('background', '#203044').css('transition', 'background-color 0.3s linear');
+        }
+
+        if(py > 460 && py <= 530) {
+            hideElements();
+            showElements(5);
         } else if(py > 530 && py <= 600) {
-            $(".main__img-overlays img").css({
-                "transition": "visibility 0.3s, opacity 0.3s linear",
-                "opacity": "0",
-                "visibility": "hidden"
-            });
-            $(".main__img-overlays img.level-4").css({
-                "transition": "visibility 0.3s, opacity 0.3s linear",
-                "opacity": "1",
-                "visibility": "visible"
-            });
-            $("body").css('cursor', 'pointer');
-            $(".main__footer").css('z-index', '2');
-            // $(".main__image").css('background', '#203044').css('transition', 'background-color 0.3s linear');
+            hideElements();
+            showElements(4);
         } else if(py > 600 && py <= 670) {
-            $(".main__img-overlays img").css({
-                "transition": "visibility 0.3s, opacity 0.3s linear",
-                "opacity": "0",
-                "visibility": "hidden"
-            });
-            $(".main__img-overlays img.level-3").css({
-                "transition": "visibility 0.3s, opacity 0.3s linear",
-                "opacity": "1",
-                "visibility": "visible"
-            });
-            $("body").css('cursor', 'pointer');
-            $(".main__footer").css('z-index', '2');
-            // $(".main__image").css('background', '#203044').css('transition', 'background-color 0.3s linear');
+            hideElements();
+            showElements(3);
         } else if(py > 670 && py <= 740) {
-            $(".main__img-overlays img").css({
-                "transition": "visibility 0.3s, opacity 0.3s linear",
-                "opacity": "0",
-                "visibility": "hidden"
-            });
-            $(".main__img-overlays img.level-2").css({
-                "transition": "visibility 0.3s, opacity 0.3s linear",
-                "opacity": "1",
-                "visibility": "visible"
-            });
-            $("body").css('cursor', 'pointer');
-            $(".main__footer").css('z-index', '2');
-            // $(".main__image").css('background', '#203044').css('transition', 'background-color 0.3s linear');
+            hideElements();
+            showElements(2);
         } else {
-            $(".main__img-overlays img").css({
-                "transition": "visibility 0.3s, opacity 0.3s linear",
-                "opacity": "0",
-                "visibility": "hidden"
-            });
+            hideElements();
             $("body").css('cursor', 'default');
             $(".main__footer").css('z-index', '4');
-            // $(".main__image").css('background', '#4a72a5').css('transition', 'background-color 0.3s linear');
         }
     });
 });
