@@ -59,6 +59,7 @@
   font-size: 18px;
   line-height: 1.2em;
   color: #ffffff;
+  position: relative;
 
   & a {
     color: #fff;
@@ -78,7 +79,7 @@
   bottom: 0;
 }
 
-.main__image .main__image-img {
+/*.main__image .main__image-img {
   z-index: 1;
   height: 100vh;
   object-fit: cover;
@@ -89,6 +90,14 @@
   opacity: 0;
   height: 100vh;
   object-fit: cover;
+}*/
+
+.main__image-img {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
 .main__img-overlays img {

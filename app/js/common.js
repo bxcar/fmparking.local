@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $(".main__image-img-hidden").on("mousemove", function(event) {
+$(document).ready(function () {
+    /*$(".main__image-img-hidden").on("mousemove", function(event) {
         bounds=this.getBoundingClientRect();
         var left=bounds.left;
         var top=bounds.top;
@@ -11,7 +11,7 @@ $(document).ready(function() {
         var ih=this.naturalHeight;
         var px=x/cw*iw;
         var py=y/ch*ih;
-        /*console.log("click on "+this.tagName+" at pixel ("+px+","+py+") mouse pos ("+x+"," + y+ ") relative to boundingClientRect at ("+left+","+top+") client image size: "+cw+" x "+ch+" natural image size: "+iw+" x "+ih );*/
+        //console.log("click on "+this.tagName+" at pixel ("+px+","+py+") mouse pos ("+x+"," + y+ ") relative to boundingClientRect at ("+left+","+top+") client image size: "+cw+" x "+ch+" natural image size: "+iw+" x "+ih );
 
         // console.log(px+","+py);
 
@@ -65,5 +65,66 @@ $(document).ready(function() {
             $("body").css('cursor', 'default');
             $(".main__footer").css('z-index', '4');
         }
+    });*/
+
+    $(".st0").on("mousemove", function (event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        $(".main-img-dark").css({
+            "transition": "visibility 0.3s, opacity 0.3s linear",
+            "opacity": "0"
+        });
+        $(".main__img-title").css({
+            "transition": "visibility 0.3s, opacity 0.3s linear",
+            "opacity": "0",
+            "visibility": "hidden"
+        });
+        $('.hole-black').attr('d', '');
+        $("body").css('cursor', 'default');
+        $(".main__developer").css('color', '#fff');
+        $(".main__developer a").css('color', '#fff');
+        $(".main__copyright").css('color', '#fff');
+
+        function showElements(element) {
+            $(".main-img-dark").css({
+                "transition": "visibility 0.3, opacity 0.3s linear",
+                "opacity": "1"
+            });
+            $(".main__img-title-level" + element).css({
+                "transition": "visibility 0.3, opacity 0.3s linear",
+                "opacity": "1",
+                "visibility": "visible"
+            });
+            $("body").css('cursor', 'pointer');
+            $(".main__footer").css('z-index', '2');
+            $(".main__developer").css('color', '#666');
+            $(".main__developer a").css('color', '#666');
+            $(".main__copyright").css('color', '#666');
+            $(".main__img-title").css('left', x).css('top', y);
+            if (x > ($(window).width() - 650)) {
+                $(".main__img-title").css('left', $(window).width() - 650).css('top', y);
+            }
+        }
+
+        showElements($(this).attr('data-floor'));
+        $('.hole-black').attr('d', $(this).attr('d'));
+    });
+
+    $(".st0").on("mouseout", function () {
+        $(".main-img-dark").css({
+            "transition": "visibility 0.3s, opacity 0.3s linear",
+            "opacity": "0"
+        });
+        $(".main__img-title").css({
+            "transition": "visibility 0.3s, opacity 0.3s linear",
+            "opacity": "0",
+            "visibility": "hidden"
+        });
+        $('.hole-black').attr('d', '');
+        $("body").css('cursor', 'default');
+        $(".main__developer").css('color', '#fff');
+        $(".main__developer a").css('color', '#fff');
+        $(".main__copyright").css('color', '#fff');
     });
 });
