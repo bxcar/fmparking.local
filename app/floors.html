@@ -9,27 +9,34 @@
 
     <!--header styles start-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/main.css">
     <!--header styles end-->
 </head>
 <body>
 <div class="floors">
     <div class="filter">
-        <img class="filter__logo" src="#" alt="">
+        <a href="/" class="filter__logo-link"><img class="filter__logo" src="img/logo-floors.png" alt=""></a>
         <div class="filter__price-filter">
             <span class="filter__price-filter-title">Стоимость, ₽</span>
             <div class="filter__price-filter-inner-wrapper">
                 <span class="filter__price-filter-min">от <span class="filter__price-filter-min-number">250 000</span> ₽</span>
                 <span class="filter__price-filter-max">до <span class="filter__price-filter-max-number">750 000</span> ₽</span>
             </div>
+            <div class="price-range-wrapper">
+                <div id="price-range"></div>
+            </div>
         </div>
         <div class="filter__area-filter">
-            <span class="filter__price-filter-title">Площадь, м²</span>
-            <div class="filter__price-filter-inner-wrapper">
-                <span class="filter__price-filter-min">от <span
-                        class="filter__price-filter-min-number">12</span> м²</span>
-                <span class="filter__price-filter-max">до <span
-                        class="filter__price-filter-max-number">22</span> м²</span>
+            <span class="filter__area-filter-title">Площадь, м²</span>
+            <div class="filter__area-filter-inner-wrapper">
+                <span class="filter__area-filter-min">от <span
+                        class="filter__area-filter-min-number">12</span> м²</span>
+                <span class="filter__area-filter-max">до <span
+                        class="filter__area-filter-max-number">22</span> м²</span>
+            </div>
+            <div class="area-range-wrapper">
+                <div id="area-range"></div>
             </div>
         </div>
         <div class="filter__floors">
@@ -45,7 +52,7 @@
         <div class="filter__show-places">
             <span class="filter__show-places-show">Показать <span
                     class="filter__show-places-show-number">316 мест</span></span>
-            <span class="filter__show-places-clean"><img src="#" alt=""></span>
+            <span class="filter__show-places-clean"><img src="img/clean.png" alt=""></span>
         </div>
         <div class="filter__places-list">
             <span class="filter__places-list-title">Доступно <span
@@ -53,8 +60,8 @@
             <div class="filter__places-list-sorting">
                 <span class="filter__places-list-sorting-title">Сортировать</span>
                 <div class="filter__places-list-sorting-inner-wrapper">
-                    <span class="filter__places-list-sorting-by-price">по цене <img src="#" alt=""> </span>
-                    <span class="filter__places-list-sorting-by-area">по площади <img src="#" alt=""></span>
+                    <span class="filter__places-list-sorting-by-price">по цене <img src="img/arrow-bottom.png" alt=""> </span>
+                    <span class="filter__places-list-sorting-by-area">по площади <img src="img/arrow-bottom.png" alt=""></span>
                 </div>
             </div>
             <div class="filter__places-list-items">
@@ -111,10 +118,11 @@
     </div>
     <div class="plan">
         <header class="plan__header">
-            <a href="/" class="plan__header-to-main"><img src="#" alt=""> на главную</a>
+            <a href="/" class="plan__header-to-main"><img src="img/arrow-left.png" alt=""> на главную</a>
             <div class="plan__header-inner-wrapper">
-                <span class="plan__header-address"><img src="#" alt="">г. Москва, ул. Омская, 7А</span>
-                <a href="tel:+74957740292" class="plan__header-phone"><img src="#" alt="">+7 (495) 774-02-92</a>
+                <span class="plan__header-address"><img src="img/location-icon-floors.png" alt="">г. Москва, ул. Омская, 7А</span>
+                <a href="tel:+74957740292" class="plan__header-phone"><img src="img/phone-icon-floors.png" alt="">+7
+                    (495) 774-02-92</a>
             </div>
         </header>
         <div class="plan__image">
@@ -204,17 +212,15 @@
 </svg>
             </div>
             <div class="legend">
-                <span class="legend__item"><img src="" alt="">Свободные места</span>
-                <span class="legend__item"><img src="" alt="">Занятые места</span>
+                <span class="legend__item"><img src="img/available-places-floors.png" alt="">Свободные места</span>
+                <span class="legend__item"><img src="img/unavailable-places-floors.png" alt="">Занятые места</span>
             </div>
             <div class="floors-changer">
-                <span class="floors-changer__title"></span>
-                <div class="floors-changer__items">
-                    <span class="floors-changer__item">5</span>
-                    <span class="floors-changer__item">4</span>
-                    <span class="floors-changer__item">3</span>
-                    <span class="floors-changer__item">2</span>
-                </div>
+                <span class="floors-changer__title">Этаж</span>
+                <span class="floors-changer__item">5</span>
+                <span class="floors-changer__item">4</span>
+                <span class="floors-changer__item">3</span>
+                <span class="floors-changer__item">2</span>
             </div>
         </div>
     </div>
@@ -224,6 +230,7 @@
 </div>
 <!--footer scripts start-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/common.js"></script>
 <!--footer scripts end-->

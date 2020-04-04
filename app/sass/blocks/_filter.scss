@@ -1,0 +1,82 @@
+.filter {
+  width: 465px;
+  height: 100vh;
+  box-shadow: 0 0 46px 0px rgba(0,0,0,.22);
+  padding-left: 45px;
+  padding-right: 45px;
+  box-sizing: border-box;
+  padding-top: 22px;
+}
+
+.filter__logo-link {
+  margin-bottom: 35px;
+  display: block;
+}
+
+.filter__price-filter {
+  margin-bottom: 35px;
+}
+
+.filter__area-filter {
+  margin-bottom: 45px;
+}
+
+.filter__price-filter-title,
+.filter__area-filter-title {
+  display: block;
+  margin-bottom: 5px;
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  opacity: 0.62;
+}
+
+.filter__price-filter-inner-wrapper,
+.filter__area-filter-inner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+
+.filter__price-filter-min,
+.filter__price-filter-max,
+.filter__area-filter-min,
+.filter__area-filter-max {
+  font-family: "CeraRoundPro-Bold", sans-serif;
+  font-size: 21px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  border-radius: 50%;
+  outline: none;
+  height: 20px;
+  width: 20px;
+  box-shadow: 0 0 13px 0 rgba(0,0,0,.24);
+  top: -8px;
+  border: none;
+  background: #fff;
+}
+
+.ui-slider-horizontal {
+  height: 4px;
+}
+
+.ui-widget-header {
+  background: #67b846;
+}
+
+.ui-widget.ui-widget-content {
+  border-color: #67b846;
+}
+
+.price-range-wrapper,
+.area-range-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
+}
