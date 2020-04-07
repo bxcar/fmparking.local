@@ -10,7 +10,7 @@
 
 .filter__logo-link {
   margin-bottom: 35px;
-  display: block;
+  display: inline-block;
 }
 
 .filter__price-filter {
@@ -79,4 +79,213 @@
 .area-range-wrapper {
   padding-left: 10px;
   padding-right: 10px;
+}
+
+.filter__floors {
+  margin-bottom: 34px;
+}
+
+.filter__floors-title {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  opacity: 0.62;
+}
+
+.filer__floors-inner-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__floors-floor {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px solid #e3e3e3;
+
+  &:hover,
+  &.active {
+    background: #69bc48;
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    color: #fff;
+    border: none;
+  }
+}
+
+.filter__floors-floor--any {
+  width: 108px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  border-radius: 21px;
+  cursor: pointer;
+}
+
+.filter__show-places {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 25px;
+}
+
+.filter__show-places-show {
+  width: 224px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "CeraRoundPro-Bold", sans-serif;
+  font-size: 18px;
+  line-height: 1.2em;
+  color: #fff;
+  border-radius: 24px;
+  cursor: pointer;
+  background: #69bc48;
+}
+
+.filter__show-places-clean {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+.filter__places-list-title {
+  display: block;
+  font-family: "CeraRoundPro-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  margin-bottom: 20px;
+}
+
+.filter__places-list-sorting {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter__places-list-sorting-title {
+  font-family: "CeraRoundPro-Light",sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  opacity: .62;
+}
+
+.filter__places-list-sorting-by-price,
+.filter__places-list-sorting-by-area {
+  font-family: "CeraRoundPro-Medium",sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  position: relative;
+  cursor: pointer;
+
+  img {
+    position: absolute;
+    top: 25%;
+    margin-left: 5px;
+  }
+}
+
+.filter__places-list-sorting-by-area {
+  display: none;
+}
+
+.filter__places-list-items {
+  height: calc(100vh - 702px);
+  //background: rgba(0,0,0,0.3);
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  padding-right: 33px;
+  width: 375px;
+}
+
+/* width */
+.filter__places-list-items::-webkit-scrollbar {
+  width: 0;
+}
+
+/* width */
+.filter__places-list-items.overflow::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+.filter__places-list-items.overflow::-webkit-scrollbar-track {
+  background: #e3e3e3;
+}
+
+/* Handle */
+.filter__places-list-items.overflow::-webkit-scrollbar-thumb {
+  background: #69bc48;
+}
+
+.filter__places-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter__places-list-item-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.filter__places-list-item-number,
+.filter__places-list-item-price,
+.filter__places-list-item-area {
+  font-family: "CeraRoundPro-Bold",sans-serif;
+  font-size: 25px;
+  line-height: 1.2em;
+  color: #69bc48;
+}
+
+.filter__places-list-item-floor,
+.filter__places-list-item-size,
+.filter__places-list-item-area-detailed {
+  font-family: "CeraRoundPro-Light",sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  opacity: 0.62;
+}
+
+.filter__places-list-item-price,
+.filter__places-list-item-area {
+  color: #2e2e2e;
 }

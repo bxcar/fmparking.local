@@ -81,8 +81,17 @@ $(document).ready(function () {
             $(".filter__area-filter-max-number").text(numberWithSpaces(ui.values[1]));
         }
     });
+
+    if(isOverflown(document.getElementsByClassName('filter__places-list-items')['0'])) {
+        $('.filter__places-list-items').addClass('overflow');
+    }
+
 });
 
 function numberWithSpaces(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+function isOverflown(element) {
+    return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 }
