@@ -72,7 +72,10 @@
 }
 
 .ui-widget.ui-widget-content {
-  border-color: #67b846;
+  //border-color: #67b846;
+  border: none;
+  border-radius: 0;
+  background: #e1e1e1;
 }
 
 .price-range-wrapper,
@@ -116,7 +119,6 @@
   box-sizing: border-box;
   border: 2px solid #e3e3e3;
 
-  &:hover,
   &.active {
     background: #69bc48;
     font-family: "CeraRoundPro-Bold", sans-serif;
@@ -159,8 +161,76 @@
   line-height: 1.2em;
   color: #fff;
   border-radius: 24px;
+  border: none;
   cursor: pointer;
+  box-sizing: border-box;
   background: #69bc48;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  /*&:hover {
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    background: #69bc48;
+    color: #fff;
+    border: none;
+  }*/
+
+  &::before {
+    z-index: 2;
+    box-sizing: border-box;
+
+    -o-transform: scale(0);
+    -o-transition-duration: .3s;
+    -o-transition-duration: .35s;
+    -o-transition-property: background-color,-o-transform;
+    -o-transition-timing-function: ease;
+    -webkit-transform: scale(0);
+    -webkit-transition-duration: .3s;
+    -webkit-transition-duration: .35s;
+    -webkit-transition-property: background-color,-webkit-transform;
+    -webkit-transition-timing-function: ease;
+    background-color: #81da58;
+    border-radius: 100%;
+    content: "";
+    height: 42px;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    position: absolute;
+    top: 110%;
+    transform: scale(0);
+    transition-duration: .3s;
+    transition-duration: .35s;
+    transition-property: background-color,-webkit-transform;
+    transition-property: transform,background-color;
+    transition-property: transform,background-color,-webkit-transform,-o-transform;
+    transition-timing-function: ease;
+    width: 42px;
+
+    height: 44px;
+    margin-left: -22px;
+    margin-top: -22px;
+    width: 44px;
+  }
+
+  &:hover::before {
+    -o-transform: scale(8);
+    -o-transition-duration: .7s;
+    -webkit-transform: scale(8);
+    -webkit-transition-duration: .7s;
+    background-color: #81da58;
+    transform: scale(8);
+    transition-duration: .7s;
+  }
+
+  &:hover {
+    transition-duration: .2s;
+  }
+}
+
+.filter__show-places-show-number-wrapper {
+  z-index: 3;
 }
 
 .filter__show-places-clean {
@@ -172,6 +242,23 @@
   border-radius: 50%;
   background: #f1f1f1;
   cursor: pointer;
+
+  -moz-osx-font-smoothing: inherit;
+  -o-transition-duration: .3s;
+  -o-transition-property: background-color;
+  -o-transition-timing-function: ease;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: inherit;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: background-color;
+  -webkit-transition-timing-function: ease;
+  transition-duration: .3s;
+  transition-property: background-color;
+  transition-timing-function: ease;
+
+  &:hover {
+    background: rgba(107,132,77,.2);
+  }
 }
 
 .filter__places-list-title {
@@ -187,7 +274,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .filter__places-list-sorting-title {
@@ -223,7 +310,8 @@
   //background: rgba(0,0,0,0.3);
   overflow-y: scroll;
   margin-bottom: 10px;
-  padding-right: 33px;
+  padding-right: 43px;
+  margin-left: -10px;
   width: 375px;
 }
 
@@ -251,11 +339,28 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 20px;
+  padding: 10px;
+  width: 375px;
   cursor: pointer;
+
+  -o-transition-duration: .3s;
+  -o-transition-property: background-color,opacity,-o-transform;
+  -o-transition-timing-function: ease;
+  -webkit-transition-duration: .3s;
+  -webkit-transition-property: background-color,opacity,-webkit-transform;
+  -webkit-transition-timing-function: ease;
+  transition-duration: .3s;
+  transition-property: background-color,opacity,-webkit-transform;
+  transition-property: background-color,opacity,transform;
+  transition-property: background-color,opacity,transform,-webkit-transform,-o-transform;
+  transition-timing-function: ease;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:hover {
+    background-color: rgba(107,132,77,.1);
   }
 }
 

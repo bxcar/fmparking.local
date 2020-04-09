@@ -1,5 +1,32 @@
 $(document).ready(function () {
+
+    var movest0_check = false;
+
+    function thirdFloorShow() {
+        if(movest0_check) {
+            return;
+        }
+        $(".main-img-dark").css({
+            "transition": "visibility 0.5s, opacity 0.5s linear",
+            "opacity": "1"
+        });
+        $(".main__img-title-level3").css({
+            "transition": "visibility 0.5s, opacity 0.5s linear",
+            "opacity": "1",
+            "visibility": "visible"
+        });
+        $(".main__developer").css('color', '#666');
+        $(".main__developer a").css('color', '#666');
+        $(".main__copyright").css('color', '#666');
+        var third_floor = document.querySelectorAll('[data-floor="3"]')['0'];
+        $(".main__img-title").css('left', $(window).width() - 650).css('top', getCoords(third_floor).top + 10);
+        $('.hole-black').attr('d', $('[data-floor="3"]').attr('d'));
+    }
+
+    setTimeout(thirdFloorShow, 3000);
+
     $(".st0").on("mousemove", function (event) {
+        movest0_check = true;
         var x = event.clientX;
         var y = event.clientY;
 
@@ -20,11 +47,11 @@ $(document).ready(function () {
 
         function showElements(element) {
             $(".main-img-dark").css({
-                "transition": "visibility 0.3, opacity 0.3s linear",
+                "transition": "visibility 0.3s, opacity 0.3s linear",
                 "opacity": "1"
             });
             $(".main__img-title-level" + element).css({
-                "transition": "visibility 0.3, opacity 0.3s linear",
+                "transition": "visibility 0.3s, opacity 0.3s linear",
                 "opacity": "1",
                 "visibility": "visible"
             });
@@ -64,6 +91,8 @@ $(document).ready(function () {
         range: true,
         min: 250000,
         max: 700000,
+        step: 5000,
+        // animate:"slow",
         values: [250000, 700000],
         slide: function (event, ui) {
             $(".filter__price-filter-min-number").text(numberWithSpaces(ui.values[0]));
@@ -75,6 +104,8 @@ $(document).ready(function () {
         range: true,
         min: 12,
         max: 22,
+        // step: .0001,
+        // animate:"slow",
         values: [12, 22],
         slide: function (event, ui) {
             $(".filter__area-filter-min-number").text(numberWithSpaces(ui.values[0]));
@@ -94,4 +125,22 @@ function numberWithSpaces(x) {
 
 function isOverflown(element) {
     return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
+}
+
+function getCoords(elem) { // crossbrowser version
+    var box = elem.getBoundingClientRect();
+
+    var body = document.body;
+    var docEl = document.documentElement;
+
+    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+    var clientTop = docEl.clientTop || body.clientTop || 0;
+    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+    var top  = box.top +  scrollTop - clientTop;
+    var left = box.left + scrollLeft - clientLeft;
+
+    return { top: Math.round(top), left: Math.round(left) };
 }

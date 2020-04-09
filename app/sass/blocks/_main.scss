@@ -13,7 +13,7 @@
 .header__address {
   display: flex;
   align-items: center;
-  margin-right: 180px;
+  margin-right: 120px;
   font-family: "CeraRoundPro-Regular", sans-serif;
   font-size: 23px;
   line-height: 1.2em;
@@ -69,6 +69,7 @@
 .main__header-inner-wrapper {
   display: flex;
   align-items: center;
+  margin-top: -35px;
 }
 
 .main__image img {
