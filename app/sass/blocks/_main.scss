@@ -36,6 +36,10 @@
   & img {
     margin-right: 17px;
   }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .main__footer {

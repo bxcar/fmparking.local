@@ -4,6 +4,7 @@
   padding-right: 45px;
   padding-top: 45px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .plan__header {
@@ -26,6 +27,10 @@
 
   img {
     margin-right: 13px;
+  }
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -133,3 +138,36 @@
 .plan__image {
   width: 90%;
 }
+
+.plan__image svg {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
+.plan__image svg > .st0:hover {
+  fill: #69bc48;
+
+  & + .st1 {
+    fill: #69bc48;
+  }
+
+  & + .st1 + .st3 {
+    display: none;
+  }
+}
+
+#custom_smog {
+  width: 100%;
+  height: 100%;
+  opacity: .71;
+  display: none;
+}
+
+.rect-temp.st0 {
+  cursor: pointer;
+  fill: #69bc48;
+  display: block;
+  //pointer-events: none;
+}
+

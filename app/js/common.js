@@ -3,7 +3,7 @@ $(document).ready(function () {
     var movest0_check = false;
 
     function thirdFloorShow() {
-        if(movest0_check) {
+        if (movest0_check) {
             return;
         }
         $(".main-img-dark").css({
@@ -113,9 +113,37 @@ $(document).ready(function () {
         }
     });
 
-    if(isOverflown(document.getElementsByClassName('filter__places-list-items')['0'])) {
+    if (isOverflown(document.getElementsByClassName('filter__places-list-items')['0'])) {
         $('.filter__places-list-items').addClass('overflow');
     }
+
+    $(".plan__image svg > .st0").on("mouseenter", function () {
+        var first_elem = $(this).clone().addClass('rect-temp');
+        var second_elem = $(this).next().clone().addClass('path-temp');
+        $(".plan__image svg").append(first_elem).append(second_elem);
+        $(".plan .overlay").css('display', 'block');
+        $("#custom_smog").css('display', 'block');
+        $(".plan__image svg").css('background', '#fff');
+        $(".filter").css('box-shadow', 'none');
+        console.log('mouseover');
+    });
+
+    $(".plan__image svg").on("DOMNodeInserted", function (event) {
+        var insertedNodeName = event.target.nodeName;
+        var insertedNode = event.target;
+        if (insertedNodeName == 'rect') {
+            $(".rect-temp").on("mouseleave", function () {
+                $(".plan__image svg > rect").last().remove();
+                $(".plan__image svg > path").last().remove();
+                $(".plan .overlay").css('display', 'none');
+                $("#custom_smog").css('display', 'none');
+                $(".plan__image svg").css('background', 'transparent');
+                $(".filter").css('box-shadow', '0 0 46px 0 rgba(0,0,0,.22)');
+                console.log('mouseout');
+            });
+        }
+    });
+
 
 });
 
@@ -139,8 +167,8 @@ function getCoords(elem) { // crossbrowser version
     var clientTop = docEl.clientTop || body.clientTop || 0;
     var clientLeft = docEl.clientLeft || body.clientLeft || 0;
 
-    var top  = box.top +  scrollTop - clientTop;
+    var top = box.top + scrollTop - clientTop;
     var left = box.left + scrollLeft - clientLeft;
 
-    return { top: Math.round(top), left: Math.round(left) };
+    return {top: Math.round(top), left: Math.round(left)};
 }
