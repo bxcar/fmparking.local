@@ -117,7 +117,8 @@ $(document).ready(function () {
         $('.filter__places-list-items').addClass('overflow');
     }
 
-    $(".plan__image svg > .st0").on("mouseenter", function () {
+    $(".plan__image svg > .st0").on("mouseenter", function (event) {
+        var position = $(this).offset();
         var first_elem = $(this).clone().addClass('rect-temp');
         var second_elem = $(this).next().clone().addClass('path-temp');
         $(".plan__image svg").append(first_elem).append(second_elem);
@@ -125,6 +126,7 @@ $(document).ready(function () {
         $("#custom_smog").css('display', 'block');
         $(".plan__image svg").css('background', '#fff');
         $(".filter").css('box-shadow', 'none');
+        $(".plcpu-short").css('display', 'block').css('left', position.left+$(this).width() + 35).css('top', position.top+$(this).height()-313);
         console.log('mouseover');
     });
 
@@ -139,6 +141,7 @@ $(document).ready(function () {
                 $("#custom_smog").css('display', 'none');
                 $(".plan__image svg").css('background', 'transparent');
                 $(".filter").css('box-shadow', '0 0 46px 0 rgba(0,0,0,.22)');
+                $(".plcpu-short").css('display', 'none');
                 console.log('mouseout');
             });
         }
