@@ -1,5 +1,14 @@
 $(document).ready(function () {
-    plan();
+
+    var url_string = window.location.href; //window.location.href
+    var url = new URL(url_string);
+    var level = url.searchParams.get("level");
+    if (level != null) {
+        ChangeFloor(level);
+    } else {
+        plan();
+    }
+
 
     $(".plcpu-full__first-button").on("click", function (event) {
         $(".contact-form--main").css('display', 'block');
@@ -22,48 +31,8 @@ $(document).ready(function () {
     });
 
     $(".floors-changer__item").on("click", function (event) {
-        // $("*").off();
-        // $.getScript("/app/js/plan.js");
-
         var floor = $(this).data('floor');
-
-        $('.floors-changer__item').removeClass('active');
-        $('.floors-changer__item[data-floor="' + floor + '"]').addClass('active');
-
-        $(".plan__image-floor.uncommented").fadeOut(150);
-
-        setTimeout(commentAndUncomment, 150);
-
-        function commentAndUncomment() {
-            //comment
-            $(".plan__image-floor.uncommented").each(function (index) {
-                try {
-                    var comment = document.createComment($(this).get(0).innerHTML);
-                    $(this).html(comment).removeClass('uncommented').addClass('commented');
-                } catch (e) {
-                    console.log(this);
-                }
-            });
-
-            $('.plan__image-floor').removeClass('active');
-            $('.plan__image-floor[data-floor="' + floor + '"]').addClass('active uncommented').removeClass('commented');
-
-            //uncomment
-            $('.plan__image-floor[data-floor="' + floor + '"]')
-                .contents()
-                .filter(function () {
-                    return this.nodeType === 8;
-                }) //get the comments
-                .replaceWith(function () {
-                    return this.data;
-                });
-
-            $('.plan__image-floor[data-floor="' + floor + '"]').fadeIn(200);
-            // $('.plan__image-floor[data-floor="' + floor + '"]').css('display', 'block');
-
-            plan();
-        }
-
+        ChangeFloor(floor);
     });
 });
 
@@ -81,11 +50,11 @@ function plan() {
         $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
 
 
-        if((position.top < 360) && position.left > 1440) {
+        if ((position.top < 360) && position.left > 1440) {
             $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + 330 + $(this).height() - 313);
-        } else if(position.left > 1440) {
+        } else if (position.left > 1440) {
             $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
-        } else if(position.top < 308) {
+        } else if (position.top < 308) {
             $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', 308 + $(this).height() - 313);
         }
     });
@@ -139,4 +108,48 @@ function planHideOverlay() {
         $(".filter").css('box-shadow', '0 0 46px 0 rgba(0,0,0,.22)');
     }
     $(".plcpu-short").css('display', 'none');
+}
+
+function ChangeFloor(level) {
+    // $("*").off();
+    // $.getScript("/app/js/plan.js");
+
+    var floor = level;
+
+    $('.floors-changer__item').removeClass('active');
+    $('.floors-changer__item[data-floor="' + floor + '"]').addClass('active');
+
+    $(".plan__image-floor.uncommented").fadeOut(150);
+
+    setTimeout(commentAndUncomment, 150);
+
+    function commentAndUncomment() {
+        //comment
+        $(".plan__image-floor.uncommented").each(function (index) {
+            try {
+                var comment = document.createComment($(this).get(0).innerHTML);
+                $(this).html(comment).removeClass('uncommented').addClass('commented');
+            } catch (e) {
+                console.log(this);
+            }
+        });
+
+        $('.plan__image-floor').removeClass('active');
+        $('.plan__image-floor[data-floor="' + floor + '"]').addClass('active uncommented').removeClass('commented');
+
+        //uncomment
+        $('.plan__image-floor[data-floor="' + floor + '"]')
+            .contents()
+            .filter(function () {
+                return this.nodeType === 8;
+            }) //get the comments
+            .replaceWith(function () {
+                return this.data;
+            });
+
+        $('.plan__image-floor[data-floor="' + floor + '"]').fadeIn(200);
+        // $('.plan__image-floor[data-floor="' + floor + '"]').css('display', 'block');
+
+        plan();
+    }
 }

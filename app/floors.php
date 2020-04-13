@@ -43,8 +43,8 @@
         <div class="filter__floors">
             <span class="filter__floors-title">Этаж</span>
             <div class="filer__floors-inner-wrapper">
-                <span class="filter__floors-floor filter__floors-floor--any">Любой</span>
-                <span class="filter__floors-floor active">2</span>
+                <span class="filter__floors-floor filter__floors-floor--any active">Любой</span>
+                <span class="filter__floors-floor">2</span>
                 <span class="filter__floors-floor">3</span>
                 <span class="filter__floors-floor">4</span>
                 <span class="filter__floors-floor">5</span>
