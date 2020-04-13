@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/favicon.png"/>
     <title>Этажи - FM Parking</title>
 
     <!--header styles start-->
@@ -31,9 +32,9 @@
             <span class="filter__area-filter-title">Площадь, м²</span>
             <div class="filter__area-filter-inner-wrapper">
                 <span class="filter__area-filter-min">от <span
-                        class="filter__area-filter-min-number">12</span> м²</span>
+                            class="filter__area-filter-min-number">12</span> м²</span>
                 <span class="filter__area-filter-max">до <span
-                        class="filter__area-filter-max-number">22</span> м²</span>
+                            class="filter__area-filter-max-number">22</span> м²</span>
             </div>
             <div class="area-range-wrapper">
                 <div id="area-range"></div>
@@ -51,13 +52,13 @@
         </div>
         <div class="filter__show-places">
             <span class="filter__show-places-show"><span
-                    class="filter__show-places-show-number-wrapper">Показать&nbsp;<span
-                    class="filter__show-places-show-number">316 мест</span></span></span>
+                        class="filter__show-places-show-number-wrapper">Показать&nbsp;<span
+                            class="filter__show-places-show-number">316 мест</span></span></span>
             <span class="filter__show-places-clean"><img src="img/clean.png" alt=""></span>
         </div>
         <div class="filter__places-list">
             <span class="filter__places-list-title">Доступно <span
-                    class="filter__places-list-title-number">316 мест</span></span>
+                        class="filter__places-list-title-number">316 мест</span></span>
             <div class="filter__places-list-sorting">
                 <span class="filter__places-list-sorting-title">Сортировать&nbsp;</span>
                 <div class="filter__places-list-sorting-inner-wrapper">
@@ -193,16 +194,16 @@
         </header>
         <div class="plan__image">
             <div class="plan__image-floor active uncommented" data-floor="2">
-                <?php include "floor2.php"?>
+                <?php include "floor2.php" ?>
             </div>
             <div class="plan__image-floor commented" data-floor="3">
-                <?php include "floor3.php"?>
+                <?php include "floor3.php" ?>
             </div>
             <div class="plan__image-floor commented" data-floor="4">
-                <?php include "floor4.php"?>
+                <?php include "floor4.php" ?>
             </div>
             <div class="plan__image-floor commented" data-floor="5">
-                <?php include "floor5.php"?>
+                <?php include "floor5.php" ?>
             </div>
             <div class="floors-changer">
                 <span class="floors-changer__title">Этаж</span>
@@ -237,7 +238,7 @@
                         <span class="plcpu-full__first-price-title">Стоимость, ₽</span>
                         <span class="plcpu-full__first-price-number">800 000 ₽</span>
                     </div>
-<!--                    <button class="plcpu-full__first-button">Оставить заявку</button>-->
+                    <!--                    <button class="plcpu-full__first-button">Оставить заявку</button>-->
                     <span class="plcpu-full__first-button">
                         <span class="plcpu-full__first-button-text">Оставить заявку</span>
                     </span>

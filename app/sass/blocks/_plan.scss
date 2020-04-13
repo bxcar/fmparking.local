@@ -794,7 +794,13 @@
 .plan__image-floor {
   display: none;
 
-  &.active {
+  &[data-floor="2"] {
     display: block;
   }
+}
+
+#free-pl {
+  filter: url("#free-pl");
+  filter: blur(5px);
+  display: none;
 }
