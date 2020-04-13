@@ -149,7 +149,7 @@
   background: transparent;
 }
 
-.plan__image svg > .st0:hover {
+.plan__image svg > .st0-st0:hover {
   fill: #69bc48;
 
   & + .st1 {
@@ -168,7 +168,7 @@
   display: none;
 }
 
-.rect-temp.st0 {
+.rect-temp.st0-st0 {
   cursor: pointer;
   fill: #69bc48;
   display: block;
@@ -789,4 +789,10 @@
   &:hover span {
     z-index: 3;
   }
+}
+
+.plan__image-floor-3,
+.plan__image-floor-4,
+.plan__image-floor-5 {
+  display: none;
 }

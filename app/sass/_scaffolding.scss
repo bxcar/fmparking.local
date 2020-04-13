@@ -1,37 +1,37 @@
 
 @font-face {
   font-family: "CeraRoundPro-Thin";
-  src: url("/fonts/CeraRoundPro-Thin.otf");
+  src: url("../fonts/CeraRoundPro-Thin.otf");
 }
 
 @font-face {
   font-family: "CeraRoundPro-Light";
-  src: url("/fonts/CeraRoundPro-Light.otf");
+  src: url("../fonts/CeraRoundPro-Light.otf");
 }
 
 @font-face {
   font-family: "CeraRoundPro-Regular";
-  src: url("/fonts/CeraRoundPro-Regular.otf");
+  src: url("../fonts/CeraRoundPro-Regular.otf");
 }
 
 @font-face {
   font-family: "CeraRoundPro-Medium";
-  src: url("/fonts/CeraRoundPro-Medium.otf");
+  src: url("../fonts/CeraRoundPro-Medium.otf");
 }
 
 @font-face {
   font-family: "CeraRoundPro-Bold";
-  src: url("/fonts/CeraRoundPro-Bold.otf");
+  src: url("../fonts/CeraRoundPro-Bold.otf");
 }
 
 @font-face {
   font-family: "CeraRoundPro-Black";
-  src: url("/fonts/CeraRoundPro-Black.otf");
+  src: url("../fonts/CeraRoundPro-Black.otf");
 }
 
 @font-face {
   font-family: "RussoOne";
-  src: url("/fonts/Russo_One.ttf");
+  src: url("../fonts/Russo_One.ttf");
 }
 
 
@@ -68,15 +68,3 @@ ul, ol {
   z-index: 1;
   display: none;
 }
-
-/*
-.overlay2 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  display: none;
-  filter: blur(4px);
-}*/
