@@ -67,6 +67,10 @@ $(document).ready(function () {
 
         showElements($(this).attr('data-floor'));
         $('.hole-black').attr('d', $(this).attr('d'));
+
+        $(this).on("click", function (event) {
+            window.location.href = window.location.href + '/floors.php?level=' + $(this).attr('data-floor');
+        });
     });
 
     $(".main__image .st0").on("mouseout", function () {
