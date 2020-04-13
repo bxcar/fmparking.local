@@ -137,14 +137,48 @@ $(document).ready(function () {
             $(".rect-temp").on("mouseleave", function () {
                 $(".plan__image svg > rect").last().remove();
                 $(".plan__image svg > path").last().remove();
+                if($('.plcpu-full:visible').length == 0) {
+                    $(".plan .overlay").css('display', 'none');
+                    $("#custom_smog").css('display', 'none');
+                    $(".plan__image svg").css('background', 'transparent');
+                    $(".filter").css('box-shadow', '0 0 46px 0 rgba(0,0,0,.22)');
+                }
+                $(".plcpu-short").css('display', 'none');
+                console.log('mouseout');
+            });
+
+            $(".rect-temp").on("click", function (event) {
+                $(".plcpu-full").css('display', 'block');
+            });
+
+            $(".plcpu-full__close").on("click", function (event) {
+                $(".plcpu-full").css('display', 'none');
                 $(".plan .overlay").css('display', 'none');
                 $("#custom_smog").css('display', 'none');
                 $(".plan__image svg").css('background', 'transparent');
                 $(".filter").css('box-shadow', '0 0 46px 0 rgba(0,0,0,.22)');
-                $(".plcpu-short").css('display', 'none');
-                console.log('mouseout');
             });
         }
+    });
+
+    $(".plcpu-full__first-button").on("click", function (event) {
+        $(".contact-form--main").css('display', 'block');
+        $(".plcpu-full").css('filter', 'blur(4px)');
+    });
+
+    $(".contact-form--main .contact-form__close").on("click", function (event) {
+        $(".contact-form--main").css('display', 'none');
+        $(".plcpu-full").css('filter', 'blur(0)');
+    });
+
+    $(".plcpu-full__second-button").on("click", function (event) {
+        $(".contact-form--sales-start").css('display', 'block');
+        $(".plcpu-full").css('filter', 'blur(4px)');
+    });
+
+    $(".contact-form--sales-start .contact-form__close").on("click", function (event) {
+        $(".contact-form--sales-start").css('display', 'none');
+        $(".plcpu-full").css('filter', 'blur(0)');
     });
 
 
