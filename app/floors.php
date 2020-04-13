@@ -192,24 +192,24 @@
             </div>
         </header>
         <div class="plan__image">
-            <div class="plan__image-floor-2 active">
+            <div class="plan__image-floor active uncommented" data-floor="2">
                 <?php include "floor2.php"?>
             </div>
-            <div class="plan__image-floor-3">
+            <div class="plan__image-floor commented" data-floor="3">
                 <?php include "floor3.php"?>
             </div>
-            <div class="plan__image-floor-4">
+            <div class="plan__image-floor commented" data-floor="4">
                 <?php include "floor4.php"?>
             </div>
-            <div class="plan__image-floor-5">
+            <div class="plan__image-floor commented" data-floor="5">
                 <?php include "floor5.php"?>
             </div>
             <div class="floors-changer">
                 <span class="floors-changer__title">Этаж</span>
-                <span class="floors-changer__item">5<span></span></span>
-                <span class="floors-changer__item">4</span>
-                <span class="floors-changer__item">3</span>
-                <span class="floors-changer__item active">2</span>
+                <span class="floors-changer__item" data-floor="5">5<span></span></span>
+                <span class="floors-changer__item" data-floor="4">4</span>
+                <span class="floors-changer__item" data-floor="3">3</span>
+                <span class="floors-changer__item active" data-floor="2">2</span>
             </div>
         </div>
         <footer class="plan__footer">
