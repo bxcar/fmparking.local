@@ -69,7 +69,7 @@ $(document).ready(function () {
         $('.hole-black').attr('d', $(this).attr('d'));
 
         $(this).on("click", function (event) {
-            window.location.href = window.location.href + '/floors.php?level=' + $(this).attr('data-floor');
+            window.location.href = window.location.href + 'floors.php?level=' + $(this).attr('data-floor');
         });
     });
 

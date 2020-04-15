@@ -1,0 +1,101 @@
+{
+  "place_1": {
+    "status": "available",
+    "data_popup": {
+      "number": "1",
+      "level": "2",
+      "length": "5.9",
+      "width": "3.25",
+      "area": "19",
+      "price": "700000"
+    }
+  },
+   "place_2": {
+    "status": "available",
+    "data_popup": {
+      "number": "2",
+      "level": "2",
+      "length": "5.9",
+      "width": "3.25",
+      "area": "19",
+      "price": "700000"
+    }
+  },
+  "place_3": {
+    "status": "available",
+    "data_popup": {
+      "number": "3",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000"
+    }
+  },
+  "place_4": {
+    "status": "available",
+    "data_popup": {
+      "number": "4",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000"
+    }
+  },
+  "place_5": {
+    "status": "available",
+    "data_popup": {
+      "number": "5",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000"
+    }
+  },
+  "place_6": {
+    "status": "available",
+    "data_popup": {
+      "number": "6",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000"
+    }
+  },
+  "place_7": {
+    "status": "available",
+    "data_popup": {
+      "number": "7",
+      "level": "2",
+      "length": "5.08",
+      "width": "3.09",
+      "area": "13.8",
+      "price": "450000"
+    }
+  },
+  "place_8": {
+    "status": "available",
+    "data_popup": {
+      "number": "8",
+      "level": "2",
+      "length": "5.08",
+      "width": "3.2",
+      "area": "16.1",
+      "price": "650000"
+    }
+  },
+  "place_9": {
+    "status": "available",
+    "data_popup": {
+      "number": "9",
+      "level": "2",
+      "length": "5.08",
+      "width": "3.26",
+      "area": "15.2",
+      "price": "650000"
+    }
+  }
+}

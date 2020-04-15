@@ -53,12 +53,12 @@
         <div class="filter__show-places">
             <span class="filter__show-places-show"><span
                         class="filter__show-places-show-number-wrapper">Показать&nbsp;<span
-                            class="filter__show-places-show-number">316 мест</span></span></span>
+                            class="filter__show-places-show-number">316</span> <span class="filter__show-places-show-number-title">мест</span></span></span>
             <span class="filter__show-places-clean"><img src="img/clean.png" alt=""></span>
         </div>
         <div class="filter__places-list">
             <span class="filter__places-list-title">Доступно <span
-                        class="filter__places-list-title-number">316 мест</span></span>
+                        class="filter__places-list-title-number"><span class="filter__places-list-title-number-number">316</span> <span class="filter__places-list-title-number-title">мест</span></span></span>
             <div class="filter__places-list-sorting">
                 <span class="filter__places-list-sorting-title">Сортировать&nbsp;</span>
                 <div class="filter__places-list-sorting-inner-wrapper">
