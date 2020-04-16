@@ -44,141 +44,54 @@
             <span class="filter__floors-title">Этаж</span>
             <div class="filer__floors-inner-wrapper">
                 <span class="filter__floors-floor filter__floors-floor--any active">Любой</span>
-                <span class="filter__floors-floor">2</span>
-                <span class="filter__floors-floor">3</span>
-                <span class="filter__floors-floor">4</span>
-                <span class="filter__floors-floor">5</span>
+                <span class="filter__floors-floor" data-floor="2">2</span>
+                <span class="filter__floors-floor" data-floor="3">3</span>
+                <span class="filter__floors-floor" data-floor="4">4</span>
+                <span class="filter__floors-floor" data-floor="5">5</span>
             </div>
         </div>
         <div class="filter__show-places">
             <span class="filter__show-places-show"><span
                         class="filter__show-places-show-number-wrapper">Показать&nbsp;<span
-                            class="filter__show-places-show-number">316</span> <span class="filter__show-places-show-number-title">мест</span></span></span>
+                            class="filter__show-places-show-number">0</span> <span class="filter__show-places-show-number-title">мест</span></span></span>
             <span class="filter__show-places-clean"><img src="img/clean.png" alt=""></span>
         </div>
         <div class="filter__places-list">
             <span class="filter__places-list-title">Доступно <span
-                        class="filter__places-list-title-number"><span class="filter__places-list-title-number-number">316</span> <span class="filter__places-list-title-number-title">мест</span></span></span>
+                        class="filter__places-list-title-number"><span class="filter__places-list-title-number-number">0</span> <span class="filter__places-list-title-number-title">мест</span></span></span>
+
+
             <div class="filter__places-list-sorting">
                 <span class="filter__places-list-sorting-title">Сортировать&nbsp;</span>
                 <div class="filter__places-list-sorting-inner-wrapper">
-                    <span class="filter__places-list-sorting-by-price">по цене <img src="img/arrow-bottom.png" alt=""> </span>
-                    <span class="filter__places-list-sorting-by-area">по площади <img src="img/arrow-bottom.png" alt=""></span>
+                    <span class="filter__places-list-sorting-by-parameter active" data-sort="price" data-direction="asc">по цене</span>
+                    <div class="filter__places-list-sorting-buttons-wrapper">
+                        <span class="filter__places-list-sorting-by-parameter" data-sort="price">по цене</span>
+                        <span class="filter__places-list-sorting-by-parameter" data-sort="area">по площади</span>
+                    </div>
+                </div>
+                <div class="filter__places-list-sorting-sort-arrow">
+                    <img src="img/arrow-bottom.png" alt="">
                 </div>
             </div>
+
             <div class="filter__places-list-items">
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№218</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
+                <?php for($i = 0; $i <= 20; $i++) { ?>
+                    <div class="filter__places-list-item">
+                        <div class="filter__places-list-item-column">
+                            <span class="filter__places-list-item-number">№<span data-key="number">0</span></span>
+                            <span class="filter__places-list-item-floor">Этаж <span data-key="level">0</span>/5</span>
+                        </div>
+                        <div class="filter__places-list-item-column">
+                            <span class="filter__places-list-item-price"><span data-key="price">0</span> ₽</span>
+                            <span class="filter__places-list-item-size" data-key="size">Стандартное место</span>
+                        </div>
+                        <div class="filter__places-list-item-column">
+                            <span class="filter__places-list-item-area"><span data-key="area">0</span> м²</span>
+                            <span class="filter__places-list-item-area-detailed"><span data-key="width">0</span> м х <span data-key="length">0</span> м</span>
+                        </div>
                     </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№217</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№216</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№215</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№214</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№213</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№212</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
-                <div class="filter__places-list-item">
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-number">№211</span>
-                        <span class="filter__places-list-item-floor">Этаж 3/5</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-price">800 000 ₽</span>
-                        <span class="filter__places-list-item-size">Большое место</span>
-                    </div>
-                    <div class="filter__places-list-item-column">
-                        <span class="filter__places-list-item-area">30 м²</span>
-                        <span class="filter__places-list-item-area-detailed">5 м х 6 м</span>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -327,6 +240,18 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="js/filter.js"></script>
 <script src="js/plan.js"></script>
+<script>
+    window.onload = function () {
+        var url_string = window.location.href; //window.location.href
+        var url = new URL(url_string);
+        var level = url.searchParams.get("level");
+        if (level != null) {
+            $('.filter__floors-floor[data-floor="' + level + '"').trigger( "click" );
+        }
+
+        $( ".filter__show-places-show" ).trigger( "click" );
+    };
+</script>
 <!--footer scripts end-->
 </body>
 </html>

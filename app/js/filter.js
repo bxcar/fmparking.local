@@ -10,6 +10,12 @@ $(document).ready(function () {
             var ix = 0;
             var area_slider_value_min = $("#area-range").slider("values", 0);
             var area_slider_value_max = $("#area-range").slider("values", 1);
+            var current_floor_check = $('.filter__floors-floor.active').data('floor');
+            var current_floor = 'any';
+
+            if(current_floor_check) {
+                current_floor = current_floor_check;
+            }
 
             $.each(map_json, function (key, value) {
                 if ((value.data_popup.price >= ui.values[0])
@@ -18,7 +24,9 @@ $(document).ready(function () {
                     && (value.data_popup.area <= area_slider_value_max)
                     && value.status == 'available') {
 
-                    if (value.status == 'available') {
+                    if (current_floor == 'any') {
+                        ix++;
+                    } else if(value.data_popup.level == current_floor) {
                         ix++;
                     }
 
@@ -45,6 +53,12 @@ $(document).ready(function () {
             var ix = 0;
             var price_slider_value_min = $("#price-range").slider("values", 0);
             var price_slider_value_max = $("#price-range").slider("values", 1);
+            var current_floor_check = $('.filter__floors-floor.active').data('floor');
+            var current_floor = 'any';
+
+            if(current_floor_check) {
+                current_floor = current_floor_check;
+            }
 
             $.each(map_json, function (key, value) {
                 if ((value.data_popup.area >= ui.values[0])
@@ -53,7 +67,9 @@ $(document).ready(function () {
                     && (value.data_popup.price <= price_slider_value_max)
                     && value.status == 'available') {
 
-                    if (value.status == 'available') {
+                    if (current_floor == 'any') {
+                        ix++;
+                    } else if(value.data_popup.level == current_floor) {
                         ix++;
                     }
 
@@ -81,6 +97,13 @@ $(document).ready(function () {
         var area_slider_value_min = $("#area-range").slider("values", 0);
         var area_slider_value_max = $("#area-range").slider("values", 1);
         var ix = 0;
+
+        var current_floor_check = $('.filter__floors-floor.active').data('floor');
+        var current_floor = 'any';
+
+        if(current_floor_check) {
+            current_floor = current_floor_check;
+        }
         // $('.st0').removeClass('active2').remove Class('item-map-show');
         // $('#custom_smog').css('opacity', '0');
         $('.filter__places-list-items').html();
@@ -92,7 +115,7 @@ $(document).ready(function () {
             '</div>\n' +
             '<div class="filter__places-list-item-column">\n' +
             '<span class="filter__places-list-item-price"><span data-key="price">800 000</span> ₽</span>\n' +
-            '<span class="filter__places-list-item-size">Большое место</span>\n' +
+            '<span class="filter__places-list-item-size" data-key="size">Большое место</span>\n' +
             '</div>\n' +
             '<div class="filter__places-list-item-column">\n' +
             '<span class="filter__places-list-item-area"><span data-key="area">30</span> м²</span>\n' +
@@ -100,6 +123,13 @@ $(document).ready(function () {
             '</div>\n' +
             '</div>\n' +
             '</div>');
+
+        if($('.filter__places-list-sorting-by-parameter.active').data('direction') == 'asc') {
+            map_json = sortData("price", map_json, 'asc');
+        } else {
+            map_json = sortData("price", map_json, 'desc');
+        }
+
         $.each(map_json, function (key, value) {
             if ((value.data_popup.price >= price_slider_value_min)
                 && (value.data_popup.price <= price_slider_value_max)
@@ -109,20 +139,27 @@ $(document).ready(function () {
                 var select = $('.filter__places-list-items .hidden .filter__places-list-item');
                 select.attr('data-id', key);
 
-                if (value.status == 'available') {
-                    ix++;
-                    // $('#'+key).addClass('item-map-show');
-                    // $('div[data-id="'+ key +'"]').css('background', 'rgba(0, 224, 68, 0.62)');
-                }
 
                 $.each(value.data_popup, function (new_key, info) {
-                    select.find('*[data-key="' + new_key + '"]').text(info);
+                    if(new_key == 'price') {
+                        select.find('*[data-key="' + new_key + '"]').text(numberWithSpaces(info));
+                    } else {
+                        select.find('*[data-key="' + new_key + '"]').text(info);
+                    }
                 });
 
-                select.clone().appendTo(".filter__places-list-items");
+                if (current_floor == 'any') {
+                    ix++;
+                    select.clone().appendTo(".filter__places-list-items");
+                } else if(value.data_popup.level == current_floor) {
+                    ix++;
+                    select.clone().appendTo(".filter__places-list-items");
+                }
+
             }
         });
         $('.filter__places-list-title-number-number').text(ix);
+        $('.filter__show-places-show-number').text(ix);
         $('.filter__places-list-title-number-title').text(declOfNum(ix, ['место', 'места', 'мест']));
         $('.filter__places-list-items>.hidden').remove();
     });
@@ -130,6 +167,77 @@ $(document).ready(function () {
     if (isOverflown(document.getElementsByClassName('filter__places-list-items')['0'])) {
         $('.filter__places-list-items').addClass('overflow');
     }
+
+    $(".filter__floors-floor").on("click", function (event) {
+        var floor = $(this).data('floor');
+        var repeated_click = false;
+
+        if($(this).hasClass('active')) {
+            repeated_click = true;
+        }
+
+        $(".filter__floors-floor").removeClass('active');
+
+        if(floor && !repeated_click) {
+            ChangeFloor(floor);
+        }
+
+        $(this).addClass('active');
+
+        var ix = 0;
+        var price_slider_value_min = $("#price-range").slider("values", 0);
+        var price_slider_value_max = $("#price-range").slider("values", 1);
+        var area_slider_value_min = $("#area-range").slider("values", 0);
+        var area_slider_value_max = $("#area-range").slider("values", 1);
+        var current_floor_check = $('.filter__floors-floor.active').data('floor');
+        var current_floor = 'any';
+
+        if(current_floor_check) {
+            current_floor = current_floor_check;
+        }
+
+        $.each(map_json, function (key, value) {
+            if ((value.data_popup.price >= price_slider_value_min)
+                && (value.data_popup.price <= price_slider_value_max)
+                && (value.data_popup.area >= area_slider_value_min)
+                && (value.data_popup.area <= area_slider_value_max)
+                && value.status == 'available') {
+
+                if (current_floor == 'any') {
+                    ix++;
+                } else if(value.data_popup.level == current_floor) {
+                    ix++;
+                }
+
+            }
+        });
+
+        $('.filter__show-places-show-number').text(ix);
+        $('.filter__show-places-show-number-title').text(declOfNum(ix, ['место', 'места', 'мест']));
+
+    });
+
+
+    $(".filter__places-list-sorting-by-parameter.active").on("click", function (event) {
+        $(".filter__places-list-sorting-buttons-wrapper").toggleClass('open');
+    });
+
+    $(".filter__places-list-sorting-buttons-wrapper .filter__places-list-sorting-by-parameter").on("click", function (event) {
+        $(".filter__places-list-sorting-buttons-wrapper").removeClass('open');
+    });
+
+    $(".filter__places-list-sorting-sort-arrow img").on("click", function (event) {
+        $(this).toggleClass('revert');
+
+        if($(".filter__places-list-sorting-by-parameter.active").data('direction') == 'asc') {
+            $(".filter__places-list-sorting-by-parameter.active").data('direction', 'desc');
+        } else {
+            $(".filter__places-list-sorting-by-parameter.active").data('direction', 'asc');
+        }
+
+        $( ".filter__show-places-show" ).trigger( "click" );
+    });
+
 });
 
 function numberWithSpaces(x) {
@@ -143,4 +251,20 @@ function isOverflown(element) {
 function declOfNum(number, titles) {
     cases = [2, 0, 1, 1, 1, 2];
     return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+}
+
+function sortData(key, data, type) {
+    let ordered = {};
+    let compareFunction = function(a, b) {
+        return data[b]['data_popup'][key] - data[a]['data_popup'][key];
+    };
+    if (type === "asc") {
+        compareFunction = function(a, b) {
+            return data[a]['data_popup'][key] - data[b]['data_popup'][key];
+        }
+    }
+    Object.keys(data).sort(compareFunction).forEach(function(key) {
+        ordered[key] = data[key];
+    });
+    return ordered;
 }

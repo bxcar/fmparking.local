@@ -285,8 +285,7 @@
   opacity: .62;
 }
 
-.filter__places-list-sorting-by-price,
-.filter__places-list-sorting-by-area {
+.filter__places-list-sorting-by-parameter {
   font-family: "CeraRoundPro-Medium",sans-serif;
   font-size: 16px;
   line-height: 1.2em;
@@ -294,15 +293,63 @@
   position: relative;
   cursor: pointer;
 
-  img {
-    position: absolute;
-    top: 25%;
-    margin-left: 5px;
+  &:not(.active) {
+    display: block;
+    padding: 5px 9px;
+
+    &:hover {
+      background-color: rgba(107,132,77,.1);
+    }
   }
 }
 
-.filter__places-list-sorting-by-area {
-  display: none;
+.filter__places-list-sorting-buttons-wrapper {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  margin-top: 5px;
+  background-color: #fff;
+  border: 1px solid rgba(107,132,77,.1);
+  border-radius: 8px;
+  box-shadow: 10px 20px 60px rgba(107,132,77,.3);
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding: 8px;
+  position: absolute;
+  transition-duration: .3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+  width: 141px;
+  z-index: 2;
+
+  &.open {
+    visibility: visible ;
+    opacity: 1;
+    height: auto;
+    transition-duration: .3s;
+    transition-property: opacity;
+    transition-timing-function: ease;
+  }
+}
+
+.filter__places-list-sorting-sort-arrow {
+  position: relative;
+  top: 2px;
+  left: 5px;
+  cursor: pointer;
+
+  img.revert {
+    transform: scale(-1, -1);
+  }
+}
+
+.filter__places-list-sorting-inner-wrapper {
+  position: relative;
+}
+
+.filter__places-list-sorting-buttons-wrapper {
+  position: absolute;
 }
 
 .filter__places-list-items {
@@ -367,8 +414,16 @@
 .filter__places-list-item-column {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
+
+  &:first-child {
+    align-items: flex-start;
+  }
+
+  &:nth-child(2) {
+    width: 151px;
+  }
 }
 
 .filter__places-list-item-number,
