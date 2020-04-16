@@ -125,9 +125,9 @@ $(document).ready(function () {
             '</div>');
 
         if($('.filter__places-list-sorting-by-parameter.active').data('direction') == 'asc') {
-            map_json = sortData("price", map_json, 'asc');
+            map_json = sortData($(".filter__places-list-sorting-by-parameter.active").data('sort'), map_json, 'asc');
         } else {
-            map_json = sortData("price", map_json, 'desc');
+            map_json = sortData($(".filter__places-list-sorting-by-parameter.active").data('sort'), map_json, 'desc');
         }
 
         $.each(map_json, function (key, value) {
@@ -224,6 +224,10 @@ $(document).ready(function () {
 
     $(".filter__places-list-sorting-buttons-wrapper .filter__places-list-sorting-by-parameter").on("click", function (event) {
         $(".filter__places-list-sorting-buttons-wrapper").removeClass('open');
+        $(".filter__places-list-sorting-by-parameter.active").text($(this).text());
+        $(".filter__places-list-sorting-by-parameter.active").data('sort', $(this).data('sort'));
+
+        $( ".filter__show-places-show" ).trigger( "click" );
     });
 
     $(".filter__places-list-sorting-sort-arrow img").on("click", function (event) {
@@ -236,6 +240,40 @@ $(document).ready(function () {
         }
 
         $( ".filter__show-places-show" ).trigger( "click" );
+    });
+
+    $(".filter__show-places-clean").on("click", function (event) {
+        // Reset the sliders to their original min/max values
+        $('#price-range').each(function(){
+
+            var options = $(this).slider( 'option' );
+
+            $(this).slider( 'values', [ options.min, options.max ] );
+
+            $(".filter__price-filter-min-number").text(numberWithSpaces(250000));
+            $(".filter__price-filter-max-number").text(numberWithSpaces(750000));
+
+        });
+
+        $('#area-range').each(function(){
+
+            var options = $(this).slider( 'option' );
+
+            $(this).slider( 'values', [ options.min, options.max ] );
+
+            $(".filter__area-filter-min-number").text(numberWithSpaces(12));
+            $(".filter__area-filter-max-number").text(numberWithSpaces(22));
+
+        });
+
+        $(".filter__floors-floor").removeClass('active');
+        $(".filter__floors-floor.filter__floors-floor--any").addClass('active');
+        $(".filter__places-list-sorting-by-parameter.active")
+            .data('sort', 'price')
+            .data('direction', 'asc');
+
+        $( ".filter__show-places-show" ).trigger( "click" );
+
     });
 
 });
