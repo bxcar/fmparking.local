@@ -37,64 +37,96 @@ $(document).ready(function () {
 });
 
 function plan() {
-    $(".plan__image svg > .st0-st0").on("mouseenter", function (event) {
-        var position = $(this).offset();
-        var first_elem = $(this).clone().addClass('rect-temp');
-        var second_elem = $(this).next().clone().addClass('path-temp');
-        $(".plan__image svg").append(first_elem).append(second_elem);
-        $(".plan .overlay").css('display', 'block');
-        $("#custom_smog").css('display', 'block');
-        // $(".plan__image svg").css('filter', 'brightness(29%)');
-        $(".plan__image svg").css('background', '#fff');
-        $(".filter").css('box-shadow', 'none');
-        $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
+    $.getJSON("/app/places_data.json", function (data) {
+        map_json = data;
+
+        $(".plan__image svg > .st0-st0").on("mouseenter", function (event) {
+            var position = $(this).offset();
+            var first_elem = $(this).clone().addClass('rect-temp');
+            var second_elem = $(this).next().clone().addClass('path-temp');
+            $(".plan__image svg").append(first_elem).append(second_elem);
+            $(".plan .overlay").css('display', 'block');
+            $("#custom_smog").css('display', 'block');
+            // $(".plan__image svg").css('filter', 'brightness(29%)');
+            $(".plan__image svg").css('background', '#fff');
+            $(".filter").css('box-shadow', 'none');
+
+            if ($(this).data('place')) {
+                var data_place = 'place_' + $(this).data('place');
+                var select = $('.plcpu-short');
+
+                $.each(map_json[data_place].data_popup, function (new_key, info) {
+                    if (new_key == 'price') {
+                        select.find('*[data-key="' + new_key + '"]').text(numberWithSpaces(info));
+                    } else {
+                        select.find('*[data-key="' + new_key + '"]').text(info);
+                    }
+                });
+            } else {
+                var data_place = 'place_1';
+                var select = $('.plcpu-short');
+
+                $.each(map_json[data_place].data_popup, function (new_key, info) {
+                    if (new_key == 'price') {
+                        select.find('*[data-key="' + new_key + '"]').text('0');
+                    } else {
+                        select.find('*[data-key="' + new_key + '"]').text('0');
+                    }
+                });
+            }
+
+            $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
 
 
-        if ((position.top < 360) && position.left > 1440) {
-            $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + 330 + $(this).height() - 313);
-        } else if (position.left > 1440) {
-            $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
-        } else if (position.top < 308) {
-            $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', 308 + $(this).height() - 313);
-        }
-    });
-
-    $(".plan__image svg").on("DOMNodeInserted", function (event) {
-
-        $("#custom_smog").on("mousemove", function (event) {
-            if ($('.plan.overlay:visible').length == 0) {
-                planHideOverlay();
+            if ((position.top < 360) && position.left > 1440) {
+                $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + 330 + $(this).height() - 313);
+            } else if (position.left > 1440) {
+                $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
+            } else if (position.top < 308) {
+                $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', 308 + $(this).height() - 313);
             }
         });
 
-        $(".plcpu-short").on("mousemove", function (event) {
-            if ($('.plan.overlay:visible').length == 0) {
-                planHideOverlay();
-            }
-        });
+        $(".plan__image svg").on("DOMNodeInserted", function (event) {
 
-        var insertedNodeName = event.target.nodeName;
-        var insertedNode = event.target;
-        if (insertedNodeName == 'rect') {
-            $(".rect-temp").on("mouseleave", function () {
+            $("#custom_smog").on("mousemove", function (event) {
                 if ($('.plan.overlay:visible').length == 0) {
                     planHideOverlay();
                 }
             });
 
-            $(".rect-temp").on("click", function (event) {
-                $(".plcpu-full").css('display', 'block');
+            $(".plcpu-short").on("mousemove", function (event) {
+                if ($('.plan.overlay:visible').length == 0) {
+                    planHideOverlay();
+                }
             });
 
-            $(".plcpu-full__close").on("click", function (event) {
-                $(".plcpu-full").css('display', 'none');
-                $(".plan .overlay").css('display', 'none');
-                $("#custom_smog").css('display', 'none');
-                // $(".plan__image svg").css('filter', 'brightness(100%)');
-                $(".plan__image svg").css('background', 'transparent');
-                $(".filter").css('box-shadow', '0 0 46px 0 rgba(0,0,0,.22)');
-            });
-        }
+            var insertedNodeName = event.target.nodeName;
+            var insertedNode = event.target;
+            if (insertedNodeName == 'rect') {
+                $(".rect-temp").on("mouseleave", function () {
+                    if ($('.plan.overlay:visible').length == 0) {
+                        planHideOverlay();
+                    }
+                });
+
+                $(".rect-temp").on("click", function (event) {
+                    ShowBigPopup($(this).data('place'));
+                });
+            }
+        });
+
+        $(".plcpu-full__close").on("click", function (event) {
+            $(".plcpu-full").css('display', 'none');
+            $(".plan .overlay").css('display', 'none');
+            $("#custom_smog").css('display', 'none');
+            // $(".plan__image svg").css('filter', 'brightness(100%)');
+            $(".plan__image svg").css('background', 'transparent');
+            $(".filter").css('box-shadow', '0 0 46px 0 rgba(0,0,0,.22)');
+            $(".filter__places-list-item").removeClass('active');
+        });
+
+
     });
 }
 
@@ -152,4 +184,27 @@ function ChangeFloor(level) {
 
         plan();
     }
+}
+
+function ShowBigPopup(place_number) {
+    $.getJSON("/app/places_data.json", function (data) {
+        var map_json = data;
+        var data_place = 'place_' + place_number;
+        var select = $('.plcpu-full');
+
+        $.each(map_json[data_place].data_popup, function (new_key, info) {
+            if (new_key == 'price') {
+                select.find('*[data-key="' + new_key + '"]').text(numberWithSpaces(info));
+            } else {
+                select.find('*[data-key="' + new_key + '"]').text(info);
+            }
+        });
+
+        $('.contact-form--main').find('*[data-key="number"]').text(map_json[data_place].data_popup.number);
+        $('.contact-from__input#place').attr('value', map_json[data_place].data_popup.number);
+
+        select.find('*[data-number="0"]').data('number', map_json[data_place].data_popup.number);
+
+        $(".plcpu-full").css('display', 'block');
+    });
 }

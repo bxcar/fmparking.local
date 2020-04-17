@@ -406,7 +406,8 @@
     margin-bottom: 0;
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     background-color: rgba(107,132,77,.1);
   }
 }

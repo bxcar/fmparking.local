@@ -137,7 +137,7 @@ $(document).ready(function () {
                 && (value.data_popup.area <= area_slider_value_max)
                 && value.status == 'available') {
                 var select = $('.filter__places-list-items .hidden .filter__places-list-item');
-                select.attr('data-id', key);
+                select.attr('data-place', value.data_popup.number);
 
 
                 $.each(value.data_popup, function (new_key, info) {
@@ -162,6 +162,7 @@ $(document).ready(function () {
         $('.filter__show-places-show-number').text(ix);
         $('.filter__places-list-title-number-title').text(declOfNum(ix, ['место', 'места', 'мест']));
         $('.filter__places-list-items>.hidden').remove();
+
     });
 
     if (isOverflown(document.getElementsByClassName('filter__places-list-items')['0'])) {
@@ -271,6 +272,7 @@ $(document).ready(function () {
         $(".filter__places-list-sorting-by-parameter.active")
             .data('sort', 'price')
             .data('direction', 'asc');
+        $(".filter__places-list-sorting-sort-arrow img").removeClass('revert');
 
         $( ".filter__show-places-show" ).trigger( "click" );
 

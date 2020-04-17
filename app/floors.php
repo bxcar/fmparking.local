@@ -132,37 +132,37 @@
         <div class="plcpu-full">
             <div class="plcpu-full__first">
                 <div class="plcpu-full__first-left">
-                    <span class="plcpu-full__first-title">Парковочное место №218</span>
+                    <span class="plcpu-full__first-title">Парковочное место №<span data-key="number">0</span></span>
                     <div class="plcpu-full__first-sizes">
                         <div class="plcpu-full__first-sizes-item">
                             <span class="plcpu-full__first-sizes-item-title">Площадь, м²</span>
-                            <span class="plcpu-full__first-sizes-item-number">30 м²</span>
+                            <span class="plcpu-full__first-sizes-item-number"><span data-key="area">0</span> м²</span>
                         </div>
                         <div class="plcpu-full__first-sizes-item">
                             <span class="plcpu-full__first-sizes-item-title">Размер (ШхД), м</span>
-                            <span class="plcpu-full__first-sizes-item-number">5 х 6</span>
+                            <span class="plcpu-full__first-sizes-item-number"><span data-key="width">0</span> х <span data-key="length">0</span></span>
                         </div>
                         <div class="plcpu-full__first-sizes-item">
                             <span class="plcpu-full__first-sizes-item-title">Этаж</span>
-                            <span class="plcpu-full__first-sizes-item-number">3/5</span>
+                            <span class="plcpu-full__first-sizes-item-number"><span data-key="level">0</span>/5</span>
                         </div>
                     </div>
                     <div class="plcpu-full__first-price">
                         <span class="plcpu-full__first-price-title">Стоимость, ₽</span>
-                        <span class="plcpu-full__first-price-number">800 000 ₽</span>
+                        <span class="plcpu-full__first-price-number"><span data-key="price">0</span> ₽</span>
                     </div>
                     <!--                    <button class="plcpu-full__first-button">Оставить заявку</button>-->
-                    <span class="plcpu-full__first-button">
+                    <span data-number="0" class="plcpu-full__first-button">
                         <span class="plcpu-full__first-button-text">Оставить заявку</span>
                     </span>
                 </div>
                 <div class="plcpu-full__first-right">
                     <div class="plcpu-full__first-right-first-block">
-                        <span class="plcpu-full__first-right-first-block-number">6<span>м</span></span>
+                        <span class="plcpu-full__first-right-first-block-number"><span data-key="length">0</span><span>м</span></span>
                         <img class="plcpu-full__first-right-first-block-img" src="img/arrow-vertical.png" alt="">
                     </div>
                     <div class="plcpu-full__first-right-second-block">
-                        <span class="plcpu-full__first-right-second-block-number">5<span>м</span></span>
+                        <span class="plcpu-full__first-right-second-block-number"><span data-key="width">0</span><span>м</span></span>
                         <img class="plcpu-full__first-right-second-block-img1" src="img/arrow-horizontal.png" alt="">
                         <img class="plcpu-full__first-right-second-block-img2" src="img/car.png" alt="">
                     </div>
@@ -178,7 +178,7 @@
         </div>
         <div class="contact-form contact-form--main">
             <div class="contact-from__top">
-                <span class="contact-from__title">Парковочное место<br>№218</span>
+                <span class="contact-from__title">Парковочное место<br>№<span data-key="number">0</span></span>
                 <span class="contact-form__close"><img src="img/close-green.png" alt=""></span>
             </div>
             <form class="contact-from__form" action="/" method="post">
@@ -186,6 +186,7 @@
                 <input class="contact-from__input" id="name" type="text" name="name" required>
                 <label class="contact-from__label" for="phone">Номер телефона</label>
                 <input class="contact-from__input" id="phone" type="tel" name="phone" required>
+                <input class="contact-from__input" id="place" type="hidden" name="place" value="0">
                 <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
                     данных и соглашаюсь с условиями и политикой
                     конфиденциальности
@@ -205,6 +206,7 @@
                 <input class="contact-from__input" id="name" type="text" name="name" required>
                 <label class="contact-from__label" for="phone">Номер телефона</label>
                 <input class="contact-from__input" id="phone" type="tel" name="phone" required>
+                <input class="contact-from__input" id="place" type="hidden" name="place" value="0">
                 <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
                     данных и соглашаюсь с условиями и политикой
                     конфиденциальности
@@ -217,20 +219,20 @@
     </div>
     <!--        plcpu -> place popup-->
     <div class="plcpu-short">
-        <span class="plcpu-short__title">Место №218</span>
+        <span class="plcpu-short__title">Место №<span data-key="number">0</span></span>
         <div class="plcpu-short__area-wrapper">
             <div class="plcpu-short__area1">
                 <span class="plcpu-short__area1-top">Площадь, м²</span>
-                <span class="plcpu-short__area1-bottom">30<span> м²</span></span>
+                <span class="plcpu-short__area1-bottom"><span data-key="area">0</span><span class="small"> м²</span></span>
             </div>
             <div class="plcpu-short__area2">
                 <span class="plcpu-short__area2-top">Размер (ШхД), м</span>
-                <span class="plcpu-short__area2-bottom">5<span> х </span>6</span>
+                <span class="plcpu-short__area2-bottom"><span data-key="width">0</span><span class="small"> х </span><span data-key="length">0</span></span>
             </div>
         </div>
         <div class="plcpu-short__price-wrapper">
             <span class="plcpu-short-price-title">Стоимость, ₽</span>
-            <span class="plcpu-short-price-number">800 000 ₽</span>
+            <span class="plcpu-short-price-number"><span data-key="price">0</span> ₽</span>
         </div>
     </div>
 </div>
@@ -250,6 +252,15 @@
         }
 
         $( ".filter__show-places-show" ).trigger( "click" );
+
+        $(".filter__places-list-item").on("click", function (event) {
+            $(".plan .overlay").css('display', 'block');
+            $("#custom_smog").css('display', 'block');
+            $(".plan__image svg").css('background', '#fff');
+            $(".filter").css('box-shadow', 'none');
+            $(this).addClass('active');
+            ShowBigPopup($(this).data('place'));
+        });
     };
 </script>
 <!--footer scripts end-->

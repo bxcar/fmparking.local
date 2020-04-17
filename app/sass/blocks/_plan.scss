@@ -220,11 +220,12 @@
 .plcpu-short__area2-bottom,
 .plcpu-short-price-number {
   font-family: "CeraRoundPro-Regular",sans-serif;
-  font-size: 65px;
+  //font-size: 65px;
+  font-size: 35px;
   line-height: 80px;
   color: #ffffff;
 
-  span {
+  span.small {
     font-size: 39px;
   }
 }
@@ -297,7 +298,8 @@
 .plcpu-full__first-sizes-item-number,
 .plcpu-full__first-price-number {
   font-family: "CeraRoundPro-Regular",sans-serif;
-  font-size: 65px;
+  //font-size: 65px;
+  font-size: 45px;
   line-height: 1.2em;
   color: #2e2e2e;
 }
@@ -416,11 +418,12 @@
 .plcpu-full__first-right-first-block-number,
 .plcpu-full__first-right-second-block-number {
   font-family: "CeraRoundPro-Regular", sans-serif;
-  font-size: 55px;
+  //font-size: 55px;
+  font-size: 35px;
   line-height: 1.2em;
   color: #2e2e2e;
 
-  & span {
+  & span:nth-child(2) {
     font-size: 36px;
   }
 }
