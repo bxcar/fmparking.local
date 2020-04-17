@@ -609,6 +609,42 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background: #fff;
+
+  &--thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 85px;
+    padding-right: 85px;
+    padding-bottom: 75px;
+  }
+}
+
+.contact-from__form--thanks img {
+  margin-top: 105px;
+  margin-bottom: 30px;
+}
+
+.contact-from__form-title {
+  font-family: "CeraRoundPro-Bold", sans-serif;
+  font-size: 33px;
+  line-height: 1.2em;
+  color: #69bc48;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-from__form-subtitle {
+  font-family: "CeraRoundPro-Light", sans-serif;
+  font-size: 25px;
+  line-height: 1.2em;
+  color: #2e2e2e;
+  opacity: 0.62;
+  display: block;
+  margin-bottom: 120px;
+  text-align: center;
 }
 
 .contact-from__label {
@@ -701,7 +737,8 @@
   height: 100%;
 }
 
-.contact-from__submit {
+.contact-from__submit,
+.contact-from__from-close {
   width: 100%;
   height: 62px;
   display: flex;
@@ -792,6 +829,10 @@
   &:hover span {
     z-index: 3;
   }
+}
+
+.contact-from__from-close {
+  width: 450px;
 }
 
 .plan__image-floor {

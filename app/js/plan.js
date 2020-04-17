@@ -126,6 +126,24 @@ function plan() {
             $(".filter__places-list-item").removeClass('active');
         });
 
+        $( ".contact-form--main" ).submit(function( event ) {
+            event.preventDefault();
+            $(this).css('display', 'none');
+            $(".contact-form--thanks-main").css('display', 'block');
+        });
+
+        $( ".contact-form--sales-start" ).submit(function( event ) {
+            event.preventDefault();
+            $(this).css('display', 'none');
+            $(".contact-form--thanks-sales-start").css('display', 'block');
+        });
+
+        $( ".contact-from__from-close" ).click(function( event ) {
+            $( ".contact-form--thanks" ).css( "display", "none" );
+            $(".plcpu-full").css('filter', 'blur(0)');
+            $( ".plcpu-full__close" ).trigger( "click" );
+        });
+
 
     });
 }
@@ -201,6 +219,7 @@ function ShowBigPopup(place_number) {
         });
 
         $('.contact-form--main').find('*[data-key="number"]').text(map_json[data_place].data_popup.number);
+        $('.contact-form--thanks-main').find('*[data-key="number"]').text(map_json[data_place].data_popup.number);
         $('.contact-from__input#place').attr('value', map_json[data_place].data_popup.number);
 
         select.find('*[data-number="0"]').data('number', map_json[data_place].data_popup.number);

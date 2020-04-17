@@ -216,6 +216,28 @@
                 <button type="submit" class="contact-from__submit"><span>Сообщить</span></button>
             </form>
         </div>
+        <div class="contact-form contact-form--thanks contact-form--thanks-main">
+            <div class="contact-from__top">
+                <span class="contact-from__title">Парковочное место<br>№<span data-key="number">0</span></span>
+            </div>
+            <div class="contact-from__form contact-from__form--thanks">
+                <img src="img/form-thanks.png" alt="#">
+                <span class="contact-from__form-title">Заявка успешно отправлена!</span>
+                <span class="contact-from__form-subtitle">В ближайшее время с вами свяжется менеджер для уточнения деталей!</span>
+                <button class="contact-from__from-close"><span>Закрыть</span></button>
+            </div>
+        </div>
+        <div class="contact-form contact-form--thanks contact-form--thanks-sales-start">
+            <div class="contact-from__top">
+                <span class="contact-from__title">Сообщить<br>о старте продаж?</span>
+            </div>
+            <div class="contact-from__form contact-from__form--thanks">
+                <img src="img/form-thanks.png" alt="#">
+                <span class="contact-from__form-title">Заявка успешно отправлена!</span>
+                <span class="contact-from__form-subtitle">Мы сообщим о старте продаж.</span>
+                <button class="contact-from__from-close"><span>Закрыть</span></button>
+            </div>
+        </div>
     </div>
     <!--        plcpu -> place popup-->
     <div class="plcpu-short">
