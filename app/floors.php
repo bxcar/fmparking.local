@@ -190,7 +190,7 @@
                 <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
                     данных и соглашаюсь с условиями и политикой
                     конфиденциальности
-                    <input type="checkbox" checked="checked">
+                    <input type="checkbox" checked="checked" required>
                     <span class="checkmark"></span>
                 </label>
                 <button type="submit" class="contact-from__submit"><span>Оставить заявку</span></button>
@@ -210,7 +210,7 @@
                 <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
                     данных и соглашаюсь с условиями и политикой
                     конфиденциальности
-                    <input type="checkbox" checked="checked">
+                    <input type="checkbox" checked="checked" required>
                     <span class="checkmark"></span>
                 </label>
                 <button type="submit" class="contact-from__submit"><span>Сообщить</span></button>
