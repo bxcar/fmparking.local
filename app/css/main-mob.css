@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "CeraRoundPro-Thin";
+    src: url("../fonts/CeraRoundPro-Thin.otf");
+}
+
+@font-face {
+    font-family: "CeraRoundPro-Light";
+    src: url("../fonts/CeraRoundPro-Light.otf");
+}
+
+@font-face {
+    font-family: "CeraRoundPro-Regular";
+    src: url("../fonts/CeraRoundPro-Regular.otf");
+}
+
+@font-face {
+    font-family: "CeraRoundPro-Medium";
+    src: url("../fonts/CeraRoundPro-Medium.otf");
+}
+
+@font-face {
+    font-family: "CeraRoundPro-Bold";
+    src: url("../fonts/CeraRoundPro-Bold.otf");
+}
+
+@font-face {
+    font-family: "CeraRoundPro-Black";
+    src: url("../fonts/CeraRoundPro-Black.otf");
+}
+
+@font-face {
+    font-family: "RussoOne";
+    src: url("../fonts/Russo_One.ttf");
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.hamburger--spin {
+    outline: none;
+    padding: 0;
+    margin-right: 17px;
+}
+
+.header {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-shadow: 0px 3px 10px 0px rgba(0,0,0,.10);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__inner-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.header__phone {
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    text-decoration: none;
+}
+
+.main__title {
+    margin: 0;
+    font-family: "CeraRoundPro-Black", sans-serif;
+    font-size: 23px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.main__subtitle {
+    margin: 0;
+    font-family: "CeraRoundPro-Light", sans-serif;
+    font-size: 15px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    margin-bottom: 40px;
+}
+
+.main__contacts-item-title {
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    font-size: 18px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+}
+.main__contacts-item-title img {
+    position: absolute;
+    left: 0;
+}
+.main__contacts-item-title span {
+    margin-left: 32px;
+}
+
+.main__contacts-item-subtitle {
+    font-family: "CeraRoundPro-Light", sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    margin-left: 32px;
+}
+
+.main__contacts-item {
+    margin-bottom: 25px;
+}
+
+.main__contacts-item:last-child {
+    margin-bottom: 40px;
+}
+
+.main__img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 38px;
+}
+
+.main__choose-place-button {
+    width: 196px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #fff;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: #69bc48;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    box-shadow: 0px 18px 35px 0px rgba(53, 53, 53, 0.18);
+    margin-bottom: 60px;
+    /*text-shadow: 0px 18px 35px rgba(53, 53, 53, 0.18);*/
+}
+
+.main__h3-title {
+    font-family: "CeraRoundPro-Black", sans-serif;
+    font-size: 23px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.main__h3-subtitle {
+    font-family: "CeraRoundPro-Light", sans-serif;
+    font-size: 15px;
+    line-height: 21px;
+    color: #2e2e2e;
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 45px;
+}
