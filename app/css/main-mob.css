@@ -43,8 +43,8 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .hamburger--spin {
@@ -171,6 +171,7 @@ html, body {
     color: #2e2e2e;
     display: block;
     margin-bottom: 30px;
+    margin-top: 0;
 }
 
 .main__h3-subtitle {
@@ -182,4 +183,49 @@ html, body {
     margin: 0;
     padding: 0;
     margin-bottom: 45px;
+}
+
+.main__sales-start-notice {
+    background: #69bc48;
+    padding: 26px 10px 32px 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.main__sales-start-notice-title {
+    font-family: "CeraRoundPro-Black", sans-serif;
+    font-size: 23px;
+    line-height: 29px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 25px;
+}
+
+.main__sales-start-notice-button {
+    width: 215px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #69bc48;
+    border-radius: 18.5px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.main__policy {
+    margin: 0;
+    font-family: "CeraRoundPro-Thin", sans-serif;
+    font-size: 12px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    opacity: 0.74;
+    margin-bottom: 25px;
 }

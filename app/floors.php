@@ -266,15 +266,6 @@
 <script src="js/plan.js"></script>
 <script>
     window.onload = function () {
-        var url_string = window.location.href; //window.location.href
-        var url = new URL(url_string);
-        var level = url.searchParams.get("level");
-        if (level != null) {
-            $('.filter__floors-floor[data-floor="' + level + '"').trigger( "click" );
-        }
-
-        $( ".filter__show-places-show" ).trigger( "click" );
-
         $(".filter__places-list-item").on("click", function (event) {
             $(".plan .overlay").css('display', 'block');
             $("#custom_smog").css('display', 'block');
