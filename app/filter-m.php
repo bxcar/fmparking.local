@@ -10,12 +10,26 @@
 
     <!--header styles start-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hamburgers.min.css">
+    <link rel="stylesheet" href="css/main-mob.css">
     <!--header styles end-->
 </head>
 <body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner-wrapper">
+            <button class="hamburger hamburger--spin" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+            </button>
+            <a href="./m.html"><img class="header__logo" src="img/logo-mobile.png" alt=""></a>
+        </div>
+        <a href="tel:+74957740292" class="header__phone">+7 (495) 774-02-92</a>
+    </div>
+</header>
 <div class="filter">
-    <a href="/" class="filter__logo-link"><img class="filter__logo" src="img/logo-floors.png" alt=""></a>
+<!--    <a href="/" class="filter__logo-link"><img class="filter__logo" src="img/logo-floors.png" alt=""></a>-->
     <div class="filter__price-filter">
         <span class="filter__price-filter-title">Стоимость, ₽</span>
         <div class="filter__price-filter-inner-wrapper">
@@ -102,6 +116,8 @@
 <!--footer scripts start-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
 <script src="js/filter.js"></script>
 <script>
     window.onload = function () {
