@@ -27,16 +27,39 @@
         </div>
         <a href="tel:+74957740292" class="header__phone">+7 (495) 774-02-92</a>
     </div>
+
+    <div class="container">
+        <div class="hamburger-menu">
+            <a class="hamburger-menu__top-link" href="./m.html"><img src="img/main-icon-m.png" alt="">Главная</a>
+            <a class="hamburger-menu__top-link" href="./filter-m.php"><img src="img/place-icon-m.png" alt="">Выбрать место</a>
+            <div class="hamburger-menu__contacts-item">
+                <span class="hamburger-menu__contacts-item-title"><img src="img/loc-icon-m-menu.png"><span>г. Москва, ул. Омская, 7А</span></span>
+                <span class="hamburger-menu__contacts-item-subtitle">Адрес объекта</span>
+            </div>
+            <div class="hamburger-menu__contacts-item">
+                <span class="hamburger-menu__contacts-item-title"><img src="img/phone-icon-m-menu.png"><span><a href="tel:+74957740292">+7 (495) 774-02-92</a></span></span>
+                <span class="hamburger-menu__contacts-item-subtitle">Телефон отдела продаж</span>
+            </div>
+            <div class="hamburger-menu__contacts-item last">
+                <span class="hamburger-menu__contacts-item-title"><img src="img/mail-icon-m-menu.png"><span><a href="mailto:parking@fm.moscow">parking@fm.moscow</a></span></span>
+                <span class="hamburger-menu__contacts-item-subtitle">Электронная почта</span>
+            </div>
+            <div class="main__sales-start-notice" style="margin-bottom: 100vh;">
+                <span class="main__sales-start-notice-title">Мы сообщим<br>о старте продаж!</span>
+                <span class="main__sales-start-notice-button">Хочу знать первым!</span>
+            </div>
+        </div>
+    </div>
 </header>
 <div class="container">
-    <h1 class="place-h1">Парковочное место №218</h1>
+    <h1 class="place-h1">Парковочное место №<span data-key="number">0</span></h1>
     <div class="place-img">
         <div class="place-img__first-block">
-            <span class="place-img__first-block-number"><span data-key="length">5.8</span><span>м</span></span>
+            <span class="place-img__first-block-number"><span data-key="length">0</span><span>м</span></span>
             <img class="place-img__first-block-img" src="img/arrow-vertical-m.png" alt="">
         </div>
         <div class="place-img__second-block">
-            <span class="place-img__second-block-number"><span data-key="width">2.8</span><span>м</span></span>
+            <span class="place-img__second-block-number"><span data-key="width">0</span><span>м</span></span>
             <img class="place-img__second-block-img1" src="img/arrow-horizontal-m.png" alt="">
             <img class="place-img__second-block-img2" src="img/car-m.png" alt="">
         </div>
@@ -44,19 +67,19 @@
     <div class="place-sizes">
         <div class="place-sizes__item">
             <span class="place-sizes__item-title">Площадь, м²</span>
-            <span class="place-sizes__item-number"><span data-key="area">30</span> м²</span>
+            <span class="place-sizes__item-number"><span data-key="area">0</span> м²</span>
         </div>
         <div class="place-sizes__item">
             <span class="place-sizes__item-title">Размер (Ш х Д), м</span>
-            <span class="place-sizes__item-number"><span data-key="width">5</span> х <span data-key="length">6</span></span>
+            <span class="place-sizes__item-number"><span data-key="width">0</span> х <span data-key="length">0</span></span>
         </div>
         <div class="place-sizes__item">
             <span class="place-sizes__item-title">Этаж</span>
-            <span class="place-sizes__item-number"><span data-key="level">3</span>/5</span>
+            <span class="place-sizes__item-number"><span data-key="level">0</span>/5</span>
         </div>
         <div class="place-sizes__item">
             <span class="place-sizes__item-title">Стоимость, ₽</span>
-            <span class="place-sizes__item-number"><span data-key="price">800 000</span> ₽</span>
+            <span class="place-sizes__item-number"><span data-key="price">0</span> ₽</span>
         </div>
     </div>
     <span class="place-book-button">Оставить заявку</span>

@@ -27,9 +27,33 @@
         </div>
         <a href="tel:+74957740292" class="header__phone">+7 (495) 774-02-92</a>
     </div>
+
+    <div class="container">
+        <div class="hamburger-menu">
+            <a class="hamburger-menu__top-link" href="./m.html"><img src="img/main-icon-m.png" alt="">Главная</a>
+            <a class="hamburger-menu__top-link" href="./filter-m.php"><img src="img/place-icon-m.png" alt="">Выбрать место</a>
+            <div class="hamburger-menu__contacts-item">
+                <span class="hamburger-menu__contacts-item-title"><img src="img/loc-icon-m-menu.png"><span>г. Москва, ул. Омская, 7А</span></span>
+                <span class="hamburger-menu__contacts-item-subtitle">Адрес объекта</span>
+            </div>
+            <div class="hamburger-menu__contacts-item">
+                <span class="hamburger-menu__contacts-item-title"><img src="img/phone-icon-m-menu.png"><span><a href="tel:+74957740292">+7 (495) 774-02-92</a></span></span>
+                <span class="hamburger-menu__contacts-item-subtitle">Телефон отдела продаж</span>
+            </div>
+            <div class="hamburger-menu__contacts-item last">
+                <span class="hamburger-menu__contacts-item-title"><img src="img/mail-icon-m-menu.png"><span><a href="mailto:parking@fm.moscow">parking@fm.moscow</a></span></span>
+                <span class="hamburger-menu__contacts-item-subtitle">Электронная почта</span>
+            </div>
+            <div class="main__sales-start-notice" style="margin-bottom: 100vh;">
+                <span class="main__sales-start-notice-title">Мы сообщим<br>о старте продаж!</span>
+                <span class="main__sales-start-notice-button">Хочу знать первым!</span>
+            </div>
+        </div>
+    </div>
+
 </header>
 <div class="filter">
-<!--    <a href="/" class="filter__logo-link"><img class="filter__logo" src="img/logo-floors.png" alt=""></a>-->
+    <!--    <a href="/" class="filter__logo-link"><img class="filter__logo" src="img/logo-floors.png" alt=""></a>-->
     <div class="filter__price-filter">
         <span class="filter__price-filter-title">Стоимость, ₽</span>
         <div class="filter__price-filter-inner-wrapper">
@@ -116,23 +140,10 @@
 <!--footer scripts start-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript"
+        src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
 <script src="js/filter.js"></script>
-<script>
-    window.onload = function () {
-
-
-        /* $(".filter__places-list-item").on("click", function (event) {
-             $(".plan .overlay").css('display', 'block');
-             $("#custom_smog").css('display', 'block');
-             $(".plan__image svg").css('background', '#fff');
-             $(".filter").css('box-shadow', 'none');
-             $(this).addClass('active');
-             ShowBigPopup($(this).data('place'));
-         });*/
-    };
-</script>
 <!--footer scripts end-->
 </body>
 </html>

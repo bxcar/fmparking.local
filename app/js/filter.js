@@ -2,11 +2,22 @@ $(document).ready(function () {
 
     $('.hamburger--spin').on('click', function () {
         $(this).toggleClass('is-active');
+        if ($(this).hasClass('is-active')) {
+            $('body').css('height', '100vh').css('overflow', 'hidden');
+            $('header').css('box-shadow', 'none')
+        } else {
+            $('body').css('height', 'auto').css('overflow', 'visible');
+            $('header').css('box-shadow', '0px 3px 10px 0px rgba(0,0,0,.10)')
+        }
+        $(".hamburger-menu").animate({width: 'toggle'}, 320);
     });
 
     var map_json;
     $.getJSON("/app/places_data.json", function (data) {
         map_json = data;
+
+        var url_file = window.location.pathname;
+        var filename = url_file.substring(url_file.lastIndexOf('/') + 1);
 
         $("#price-range").slider({
             change: function (event, ui) {
@@ -110,22 +121,42 @@ $(document).ready(function () {
             // $('.st0').removeClass('active2').remove Class('item-map-show');
             // $('#custom_smog').css('opacity', '0');
             $('.filter__places-list-items').html();
-            $('.filter__places-list-items').html('<div class="hidden">\n' +
-                '<div class="filter__places-list-item">\n' +
-                '<div class="filter__places-list-item-column">\n' +
-                '<span class="filter__places-list-item-number">№<span data-key="number">218</span></span>\n' +
-                '<span class="filter__places-list-item-floor">Этаж <span data-key="level">3</span>/5</span>\n' +
-                '</div>\n' +
-                '<div class="filter__places-list-item-column">\n' +
-                '<span class="filter__places-list-item-price"><span data-key="price">800 000</span> ₽</span>\n' +
-                '<span class="filter__places-list-item-size" data-key="size">Большое место</span>\n' +
-                '</div>\n' +
-                '<div class="filter__places-list-item-column">\n' +
-                '<span class="filter__places-list-item-area"><span data-key="area">30</span> м²</span>\n' +
-                '<span class="filter__places-list-item-area-detailed"><span data-key="width">5</span> м х <span data-key="length">6</span> м</span>\n' +
-                '</div>\n' +
-                '</div>\n' +
-                '</div>');
+
+            if (filename == 'filter-m.php') {
+                $('.filter__places-list-items').html('<div class="hidden">\n' +
+                    '<a style="text-decoration: none;" href="" class="filter__places-list-item">\n' +
+                    '<div class="filter__places-list-item-column">\n' +
+                    '<span class="filter__places-list-item-number">№<span data-key="number">218</span></span>\n' +
+                    '<span class="filter__places-list-item-floor">Этаж <span data-key="level">3</span>/5</span>\n' +
+                    '</div>\n' +
+                    '<div class="filter__places-list-item-column">\n' +
+                    '<span class="filter__places-list-item-price"><span data-key="price">800 000</span> ₽</span>\n' +
+                    '<span class="filter__places-list-item-size" data-key="size">Большое место</span>\n' +
+                    '</div>\n' +
+                    '<div class="filter__places-list-item-column">\n' +
+                    '<span class="filter__places-list-item-area"><span data-key="area">30</span> м²</span>\n' +
+                    '<span class="filter__places-list-item-area-detailed"><span data-key="width">5</span> м х <span data-key="length">6</span> м</span>\n' +
+                    '</div>\n' +
+                    '</a>\n' +
+                    '</div>');
+            } else {
+                $('.filter__places-list-items').html('<div class="hidden">\n' +
+                    '<div class="filter__places-list-item">\n' +
+                    '<div class="filter__places-list-item-column">\n' +
+                    '<span class="filter__places-list-item-number">№<span data-key="number">218</span></span>\n' +
+                    '<span class="filter__places-list-item-floor">Этаж <span data-key="level">3</span>/5</span>\n' +
+                    '</div>\n' +
+                    '<div class="filter__places-list-item-column">\n' +
+                    '<span class="filter__places-list-item-price"><span data-key="price">800 000</span> ₽</span>\n' +
+                    '<span class="filter__places-list-item-size" data-key="size">Большое место</span>\n' +
+                    '</div>\n' +
+                    '<div class="filter__places-list-item-column">\n' +
+                    '<span class="filter__places-list-item-area"><span data-key="area">30</span> м²</span>\n' +
+                    '<span class="filter__places-list-item-area-detailed"><span data-key="width">5</span> м х <span data-key="length">6</span> м</span>\n' +
+                    '</div>\n' +
+                    '</div>\n' +
+                    '</div>');
+            }
 
             if ($('.filter__places-list-sorting-by-parameter.active').data('direction') == 'asc') {
                 map_json = sortData($(".filter__places-list-sorting-by-parameter.active").data('sort'), map_json, 'asc');
@@ -143,6 +174,9 @@ $(document).ready(function () {
                     var select = $('.filter__places-list-items .hidden .filter__places-list-item');
                     select.attr('data-place', value.data_popup.number);
 
+                    if (filename == 'filter-m.php') {
+                        select.attr('href', './place-m.php?place=' + value.data_popup.number);
+                    }
 
                     $.each(value.data_popup, function (new_key, info) {
                         if (new_key == 'price') {
@@ -288,10 +322,11 @@ $(document).ready(function () {
         var url = new URL(url_string);
         var level = url.searchParams.get("level");
         if (level != null) {
-            $('.filter__floors-floor[data-floor="' + level + '"').trigger( "click" );
+            $('.filter__floors-floor[data-floor="' + level + '"').trigger("click");
         }
 
-        $( ".filter__show-places-show" ).trigger( "click" );
+        $(".filter__show-places-show").trigger("click");
+
 
     });
 

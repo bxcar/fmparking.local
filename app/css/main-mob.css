@@ -201,6 +201,7 @@ html, body {
     color: #ffffff;
     display: block;
     margin-bottom: 25px;
+    white-space: nowrap;
 }
 
 .main__sales-start-notice-button {
@@ -817,4 +818,95 @@ html, body {
 
 .plan__image-floor.active {
     display: block;
+}
+
+.hamburger-menu {
+    position: absolute;
+    top: 72px;
+    background: #fff;
+    z-index: 3;
+    padding-top: 30px;
+    width: 320px;
+    margin-left: -12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.hamburger-menu__top-link {
+    font-family: "CeraRoundPro-Black", sans-serif;
+    font-size: 21px;
+    line-height: 1.2em;
+    color: #69bc48;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+.hamburger-menu__top-link:nth-child(2) {
+    margin-bottom: 45px;
+}
+
+.hamburger-menu__top-link img {
+    position: absolute;
+    left: 0;
+}
+
+.hamburger-menu__top-link:nth-child(2) img {
+    left: 2px;
+}
+
+.hamburger-menu__contacts-item {
+    margin-bottom: 25px;
+}
+
+.hamburger-menu__contacts-item.last {
+    margin-bottom: 45px;
+}
+
+.hamburger-menu__contacts-item-title {
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    font-size: 17px;
+    line-height: 1.2em;
+    color: #69bc48;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hamburger-menu__contacts-item-title img {
+    position: absolute;
+    left: 0;
+}
+
+.hamburger-menu__contacts-item-title span {
+    margin-left: 32px;
+    white-space: nowrap;
+}
+
+.hamburger-menu__contacts-item-title span a {
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    font-size: 17px;
+    line-height: 1.2em;
+    color: #69bc48;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.hamburger-menu__contacts-item-subtitle {
+    font-family: "CeraRoundPro-Light", sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    margin-left: 32px;
+    opacity: 0.74;
+    white-space: nowrap;
 }
