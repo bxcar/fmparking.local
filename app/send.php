@@ -34,7 +34,7 @@ if($price == 0 ) {
 
 $subject = "Заявка с сайта Fm-parking";
 $message = '
-		<div><strong>Типо формы:</strong> ' . $form_type . '</div>
+		<div><strong>Тип формы:</strong> ' . $form_type . '</div>
 		<div><strong>Имя:</strong> ' . $name . '</div>
 		<div><strong>Телефон:</strong> ' . $phone . '</div>
 		<div><strong>Парковочное место:</strong> ' . $place . '</div>

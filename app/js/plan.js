@@ -37,7 +37,7 @@ $(document).ready(function () {
         ChangeFloor(floor);
     });
 
-    $( ".contact-form--main form" ).submit(function( event ) {
+    $(".contact-form--main form").submit(function (event) {
         event.preventDefault();
 
         var form = $(this);
@@ -47,9 +47,8 @@ $(document).ready(function () {
             type: "POST",
             url: url,
             data: form.serialize(),
-            success: function(data)
-            {
-                if(data == 'success') {
+            success: function (data) {
+                if (data == 'success') {
                     $('.contact-form--main').css('display', 'none');
                     $(".contact-form--thanks-main").css('display', 'block');
                 }
@@ -60,7 +59,7 @@ $(document).ready(function () {
         });
     });
 
-    $( ".contact-form--sales-start form" ).submit(function( event ) {
+    $(".contact-form--sales-start form").submit(function (event) {
         event.preventDefault();
 
         var form = $(this);
@@ -70,9 +69,8 @@ $(document).ready(function () {
             type: "POST",
             url: url,
             data: form.serialize(),
-            success: function(data)
-            {
-                if(data == 'success') {
+            success: function (data) {
+                if (data == 'success') {
                     $('.contact-form--sales-start').css('display', 'none');
                     $(".contact-form--thanks-sales-start").css('display', 'block');
                 }
@@ -93,11 +91,21 @@ function plan() {
             var first_elem = $(this).clone().addClass('rect-temp');
             var second_elem = $(this).next().clone().addClass('path-temp');
             $(".plan__image svg").append(first_elem).append(second_elem);
-            $(".plan .overlay").css('display', 'block');
-            $("#custom_smog").css('display', 'block');
-            // $(".plan__image svg").css('filter', 'brightness(29%)');
             $(".plan__image svg").css('background', '#fff');
-            $(".filter").css('box-shadow', 'none');
+            $(".plan .overlay").css('display', 'block');
+            // $(".plan .overlay").fadeIn(150);
+            $("#custom_smog").css('display', 'block');
+            // $("#custom_smog").fadeIn(150);
+            // $(".plan__image svg").css('filter', 'brightness(29%)');
+
+            /*setTimeout(displayStyles, 100);
+            function displayStyles() {
+                $(".plan .overlay").fadeIn(150);
+                $("#custom_smog").fadeIn(150);
+            }*/
+
+            $(".filter").css('transition', 'box-shadow 0.15s ease-in-out').css('box-shadow', 'none');
+
 
             if ($(this).data('place')) {
                 var data_place = 'place_' + $(this).data('place');
@@ -124,6 +132,7 @@ function plan() {
             }
 
             $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
+            // $(".plcpu-short").fadeIn(150).css('left', position.left + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
 
 
             if ((position.top < 360) && position.left > 1440) {
@@ -202,10 +211,10 @@ function plan() {
             $(".contact-form--thanks-sales-start").css('display', 'block');
         });*/
 
-        $( ".contact-from__from-close" ).click(function( event ) {
-            $( ".contact-form--thanks" ).css( "display", "none" );
+        $(".contact-from__from-close").click(function (event) {
+            $(".contact-form--thanks").css("display", "none");
             $(".plcpu-full").css('filter', 'blur(0)');
-            $( ".plcpu-full__close" ).trigger( "click" );
+            $(".plcpu-full__close").trigger("click");
         });
 
 
