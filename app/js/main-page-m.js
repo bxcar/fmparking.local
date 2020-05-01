@@ -10,4 +10,34 @@ $(document).ready(function () {
         }
         $(".hamburger-menu").animate({width: 'toggle'}, 320);
     });
+
+    $('.main__sales-start-notice-button').click(function () {
+        $(".contact-form--sales-start").animate({height: 'show'}, 500);
+        $('body').css('overflow', 'hidden');
+        $('header').css('box-shadow', 'none');
+    });
+
+    $('.contact-form--sales-start .contact-from__form').on('submit', function (e) {
+        e.preventDefault();
+        $(".contact-form").css('display', 'none');
+        $(".contact-form--thanks-sales-start").css('display', 'block');
+    });
+
+    $('.contact-form__close').click(function () {
+        $(".contact-form").animate({height: 'hide'}, 500);
+        if(!$('.hamburger--spin').hasClass('is-active')) {
+            $('body').css('overflow', 'visible');
+            $('header').css('box-shadow', '0px 3px 10px 0px rgba(0,0,0,.10)');
+        }
+    });
+
+    $('.contact-from__from-close').click(function () {
+        $(".contact-form").animate({height: 'hide'}, 500);
+        if(!$('.hamburger--spin').hasClass('is-active')) {
+            $('body').css('overflow', 'visible');
+            $('header').css('box-shadow', '0px 3px 10px 0px rgba(0,0,0,.10)');
+        }
+    });
+
+    $('.phone').mask('+7 (000) 000-00-00');
 });

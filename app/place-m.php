@@ -9,7 +9,7 @@
     <title>Парковочное место - FM Parking</title>
 
     <!--header styles start-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>-->
     <link rel="stylesheet" href="css/hamburgers.min.css">
     <link rel="stylesheet" href="css/main-mob.css">
     <!--header styles end-->
@@ -101,9 +101,73 @@
         <span class="main__sales-start-notice-button">Хочу знать первым!</span>
     </div>
 </div>
+
+<div class="contact-form contact-form--main" >
+    <div class="contact-from__top">
+        <span class="contact-from__title">Парковочное место №<span data-key="number">0</span></span>
+        <span class="contact-form__close"><img src="img/close-white.png" alt=""></span>
+    </div>
+    <form class="contact-from__form" action="/" method="post">
+        <label class="contact-from__label" for="name">Как ваше имя?</label>
+        <input class="contact-from__input" id="name" type="text" name="name" placeholder="Имя" required>
+        <label class="contact-from__label" for="phone">Номер телефона</label>
+        <input class="contact-from__input phone" id="phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+        <input class="contact-from__input" id="place" type="hidden" name="place" value="0">
+        <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
+            данных и соглашаюсь с условиями и политикой
+            конфиденциальности
+            <input type="checkbox" checked="checked" required>
+            <span class="checkmark"></span>
+        </label>
+        <button type="submit" class="contact-from__submit"><span>Оставить заявку</span></button>
+    </form>
+</div>
+<div class="contact-form contact-form--sales-start">
+    <div class="contact-from__top">
+        <span class="contact-from__title">Сообщить<br>о старте продаж?</span>
+        <span class="contact-form__close"><img src="img/close-white.png" alt=""></span>
+    </div>
+    <form class="contact-from__form" action="/" method="post">
+        <label class="contact-from__label" for="name">Как ваше имя?</label>
+        <input class="contact-from__input" id="name" type="text" name="name" placeholder="Имя" required>
+        <label class="contact-from__label" for="phone">Номер телефона</label>
+        <input class="contact-from__input phone" id="phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+        <input class="contact-from__input" id="place" type="hidden" name="place" value="0">
+        <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
+            данных и соглашаюсь с условиями и политикой
+            конфиденциальности
+            <input type="checkbox" checked="checked" required>
+            <span class="checkmark"></span>
+        </label>
+        <button type="submit" class="contact-from__submit"><span>Сообщить</span></button>
+    </form>
+</div>
+<div class="contact-form contact-form--thanks contact-form--thanks-main">
+    <div class="contact-from__top">
+        <span class="contact-from__title">Парковочное место<br>№<span data-key="number">0</span></span>
+    </div>
+    <div class="contact-from__form contact-from__form--thanks">
+        <img src="img/form-thanks.png" alt="#">
+        <span class="contact-from__form-title">Заявка успешно отправлена!</span>
+        <span class="contact-from__form-subtitle">В ближайшее время с вами свяжется менеджер для уточнения деталей!</span>
+        <button class="contact-from__from-close"><span>Закрыть</span></button>
+    </div>
+</div>
+<div class="contact-form contact-form--thanks contact-form--thanks-sales-start">
+    <div class="contact-from__top">
+        <span class="contact-from__title">Сообщить<br>о старте продаж?</span>
+    </div>
+    <div class="contact-from__form contact-from__form--thanks">
+        <img src="img/form-thanks.png" alt="#">
+        <span class="contact-from__form-title">Заявка успешно отправлена!</span>
+        <span class="contact-from__form-subtitle">Мы сообщим о старте продаж.</span>
+        <button class="contact-from__from-close"><span>Закрыть</span></button>
+    </div>
+</div>
 <!--footer scripts start-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="js/place-page-m.js"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     <title>Этажи - FM Parking</title>
 
     <!--header styles start-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+<!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="css/main.css">
     <!--header styles end-->
@@ -183,10 +183,12 @@
             </div>
             <form class="contact-from__form" action="/" method="post">
                 <label class="contact-from__label" for="name">Как ваше имя?</label>
-                <input class="contact-from__input" id="name" type="text" name="name" required>
+                <input class="contact-from__input" id="name" type="text" name="name" placeholder="Имя" required>
                 <label class="contact-from__label" for="phone">Номер телефона</label>
-                <input class="contact-from__input" id="phone" type="tel" name="phone" required>
+                <input class="contact-from__input" id="phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
                 <input class="contact-from__input" id="place" type="hidden" name="place" value="0">
+                <input class="contact-from__input" id="price" type="hidden" name="price" value="0">
+                <input class="contact-from__input" id="form_type" type="hidden" name="form_type" value="Заказ парковочного места">
                 <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
                     данных и соглашаюсь с условиями и политикой
                     конфиденциальности
@@ -203,10 +205,12 @@
             </div>
             <form class="contact-from__form" action="/" method="post">
                 <label class="contact-from__label" for="name">Как ваше имя?</label>
-                <input class="contact-from__input" id="name" type="text" name="name" required>
+                <input class="contact-from__input" id="name" type="text" name="name" placeholder="Имя" required>
                 <label class="contact-from__label" for="phone">Номер телефона</label>
-                <input class="contact-from__input" id="phone" type="tel" name="phone" required>
+                <input class="contact-from__input" id="phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
                 <input class="contact-from__input" id="place" type="hidden" name="place" value="0">
+                <input class="contact-from__input" id="price" type="hidden" name="price" value="0">
+                <input class="contact-from__input" id="form_type" type="hidden" name="form_type" value="Сообщить о старте продаж">
                 <label class="contact-from__agreement">Я даю свое согласие на обработку персональных
                     данных и соглашаюсь с условиями и политикой
                     конфиденциальности
@@ -261,7 +265,8 @@
 <!--footer scripts start-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!--<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 <script src="js/filter.js"></script>
 <script src="js/plan.js"></script>
 <script>

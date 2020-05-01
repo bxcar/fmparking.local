@@ -910,3 +910,217 @@ html, body {
     opacity: 0.74;
     white-space: nowrap;
 }
+
+/*contact form*/
+.contact-form {
+    position: fixed;
+    width: 320px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: none;
+}
+
+.contact-from__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 0.4;
+}
+
+.contact-from__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    opacity: 0.4;
+}
+
+.contact-from__input::-ms-input-placeholder { /* Microsoft Edge */
+    opacity: 0.4;
+}
+
+.contact-from__top {
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+}
+
+.contact-from__title {
+    font-family: "CeraRoundPro-Black", sans-serif;
+    font-size: 21px;
+    line-height: 1.2em;
+    color: #69bc48;
+    display: block;
+    text-align: center;
+}
+
+.contact-form__close {
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    background: #69bc48;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.contact-from__form {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: calc(100vh - 500px);
+    box-sizing: border-box;
+    background: #fff;
+}
+.contact-from__form--thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: calc(100vh - 516px);;
+}
+
+.contact-from__form--thanks img {
+    margin-top: 65px;
+    margin-bottom: 20px;
+    width: 40px;
+}
+
+.contact-from__form-title {
+    font-family: "CeraRoundPro-Black", sans-serif;
+    font-size: 23px;
+    line-height: 1.2em;
+    color: #69bc48;
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-from__form-subtitle {
+    font-family: "CeraRoundPro-Light", sans-serif;
+    font-size: 17px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    opacity: 0.62;
+    display: block;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.contact-from__label {
+    padding-top: 25px;
+    display: block;
+    font-family: "CeraRoundPro-Medium", sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    opacity: 0.62;
+}
+
+.contact-from__input {
+    font-family: "CeraRoundPro-Light", sans-serif;
+    font-size: 20px;
+    line-height: 1.2em;
+    color: #2e2e2e;
+    border: 2px solid #69bc48;
+    border-radius: 32px;
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    display: block;
+}
+
+#phone {
+    margin-bottom: 30px;
+}
+
+/* Customize the label (the container) */
+.contact-from__agreement {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-family: "CeraRoundPro-Light", sans-serif;
+    font-size: 13px;
+    line-height: 17px;
+    color: #cacaca;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 30px;
+}
+
+/* Hide the browser's default checkbox */
+.contact-from__agreement input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    border: 2px solid #eaeaea;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.contact-from__agreement input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.contact-from__agreement .checkmark:after {
+    background: transparent url("../img/checkbox.png") no-repeat center;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-from__submit,
+.contact-from__from-close {
+    width: 196px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "CeraRoundPro-Bold", sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+    color: #fff;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    background: #69bc48;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    box-shadow: 0px 18px 35px 0px rgba(53, 53, 53, 0.18);
+    margin-bottom: 60px;
+    outline: none;
+}

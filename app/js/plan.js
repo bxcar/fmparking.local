@@ -9,6 +9,8 @@ $(document).ready(function () {
         plan();
     }
 
+    $('.contact-from__input[name="phone"]').mask('+7 (000) 000-00-00');
+
 
     $(".plcpu-full__first-button").on("click", function (event) {
         $(".contact-form--main").css('display', 'block');
@@ -33,6 +35,52 @@ $(document).ready(function () {
     $(".floors-changer__item").on("click", function (event) {
         var floor = $(this).data('floor');
         ChangeFloor(floor);
+    });
+
+    $( ".contact-form--main form" ).submit(function( event ) {
+        event.preventDefault();
+
+        var form = $(this);
+        var url = '/app/send.php';
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function(data)
+            {
+                if(data == 'success') {
+                    $('.contact-form--main').css('display', 'none');
+                    $(".contact-form--thanks-main").css('display', 'block');
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
+    $( ".contact-form--sales-start form" ).submit(function( event ) {
+        event.preventDefault();
+
+        var form = $(this);
+        var url = '/app/send.php';
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function(data)
+            {
+                if(data == 'success') {
+                    $('.contact-form--sales-start').css('display', 'none');
+                    $(".contact-form--thanks-sales-start").css('display', 'block');
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
     });
 });
 
@@ -126,17 +174,33 @@ function plan() {
             $(".filter__places-list-item").removeClass('active');
         });
 
-        $( ".contact-form--main" ).submit(function( event ) {
+        /*$( ".contact-form--main form" ).submit(function( event ) {
             event.preventDefault();
-            $(this).css('display', 'none');
-            $(".contact-form--thanks-main").css('display', 'block');
-        });
 
-        $( ".contact-form--sales-start" ).submit(function( event ) {
+            var form = $(this);
+            var url = '/app/send.php';
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: form.serialize(),
+                success: function(data)
+                {
+                    console.log(data);
+                },
+                error: function (data) {
+                    console.log(data);
+                }
+            });
+            $(this).parent().css('display', 'none');
+            $(".contact-form--thanks-main").css('display', 'block');
+        });*/
+
+        /*$( ".contact-form--sales-start" ).submit(function( event ) {
             event.preventDefault();
             $(this).css('display', 'none');
             $(".contact-form--thanks-sales-start").css('display', 'block');
-        });
+        });*/
 
         $( ".contact-from__from-close" ).click(function( event ) {
             $( ".contact-form--thanks" ).css( "display", "none" );
@@ -217,6 +281,9 @@ function ShowBigPopup(place_number) {
                 select.find('*[data-key="' + new_key + '"]').text(info);
             }
         });
+
+        $('.contact-from__input[name="place"]').attr('value', map_json[data_place].data_popup.number);
+        $('.contact-from__input[name="price"]').attr('value', map_json[data_place].data_popup.price);
 
         $('.contact-form--main').find('*[data-key="number"]').text(map_json[data_place].data_popup.number);
         $('.contact-form--thanks-main').find('*[data-key="number"]').text(map_json[data_place].data_popup.number);
