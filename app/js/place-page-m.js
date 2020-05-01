@@ -30,6 +30,9 @@ $(document).ready(function () {
                     }
                 });
 
+                $('.contact-from__input[name="place"]').attr('value', value.data_popup.number);
+                $('.contact-from__input[name="price"]').attr('value', value.data_popup.price);
+
 
                 var floor = value.data_popup.level;
 
@@ -78,14 +81,50 @@ $(document).ready(function () {
 
     $('.contact-form--main .contact-from__form').on('submit', function (e) {
         e.preventDefault();
-        $(".contact-form").css('display', 'none');
-        $(".contact-form--thanks-main").css('display', 'block');
+
+        var form = $(this);
+        var url = '/app/send.php';
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function(data)
+            {
+                if(data == 'success') {
+                    $(".contact-form").css('display', 'none');
+                    $(".contact-form--thanks-main").css('display', 'block');
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+
     });
 
     $('.contact-form--sales-start .contact-from__form').on('submit', function (e) {
         e.preventDefault();
-        $(".contact-form").css('display', 'none');
-        $(".contact-form--thanks-sales-start").css('display', 'block');
+
+        var form = $(this);
+        var url = '/app/send.php';
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function(data)
+            {
+                if(data == 'success') {
+                    $(".contact-form").css('display', 'none');
+                    $(".contact-form--thanks-sales-start").css('display', 'block');
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+
     });
 
     $('.contact-form__close').click(function () {

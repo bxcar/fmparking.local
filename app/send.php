@@ -20,13 +20,25 @@ if($form_type =='Заказ парковочного места') {
     $bid_number = $data['sales_start_form']['count'] + 1;
 }
 
+if($place == 0 ) {
+    $place = 'Главная страница';
+} else {
+    $place = '№'.$place;
+}
+
+if($price == 0 ) {
+    $price = 'Главная страница';
+} else {
+    $price = $price.' ₽';
+}
+
 $subject = "Заявка с сайта Fm-parking";
 $message = '
 		<div><strong>Типо формы:</strong> ' . $form_type . '</div>
 		<div><strong>Имя:</strong> ' . $name . '</div>
 		<div><strong>Телефон:</strong> ' . $phone . '</div>
-		<div><strong>Парковочное место:</strong> №' . $place . '</div>
-		<div><strong>Цена:</strong> ' . $price . ' ₽</div>
+		<div><strong>Парковочное место:</strong> ' . $place . '</div>
+		<div><strong>Цена:</strong> ' . $price . '</div>
 		<div><strong>Дата и время:</strong> ' . date("d-m-Y H:i:s") . '</div>
 		<div><strong>Номер заявки:</strong> ' . $bid_number . '</div>
 	';

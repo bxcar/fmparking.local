@@ -19,8 +19,26 @@ $(document).ready(function () {
 
     $('.contact-form--sales-start .contact-from__form').on('submit', function (e) {
         e.preventDefault();
-        $(".contact-form").css('display', 'none');
-        $(".contact-form--thanks-sales-start").css('display', 'block');
+
+        var form = $(this);
+        var url = '/app/send.php';
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function(data)
+            {
+                if(data == 'success') {
+                    $(".contact-form").css('display', 'none');
+                    $(".contact-form--thanks-sales-start").css('display', 'block');
+                }
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+
     });
 
     $('.contact-form__close').click(function () {
