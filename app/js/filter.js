@@ -203,6 +203,17 @@ $(document).ready(function () {
             $('.filter__places-list-title-number-title').text(declOfNum(ix, ['место', 'места', 'мест']));
             $('.filter__places-list-items>.hidden').remove();
 
+            if (filename != 'filter-m.php') {
+                $(".filter__places-list-item").on("click", function (event) {
+                    $(".plan .overlay").css('display', 'block');
+                    $("#custom_smog").css('display', 'block');
+                    $(".plan__image svg").css('background', '#fff');
+                    $(".filter").css('box-shadow', 'none');
+                    $(this).addClass('active');
+                    ShowBigPopup($(this).data('place'));
+                });
+            }
+
         });
 
         if (isOverflown(document.getElementsByClassName('filter__places-list-items')['0'])) {

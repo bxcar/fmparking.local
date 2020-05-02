@@ -271,14 +271,14 @@
 <script src="js/plan.js"></script>
 <script>
     window.onload = function () {
-        $(".filter__places-list-item").on("click", function (event) {
+        /*$(".filter__places-list-item").on("click", function (event) {
             $(".plan .overlay").css('display', 'block');
             $("#custom_smog").css('display', 'block');
             $(".plan__image svg").css('background', '#fff');
             $(".filter").css('box-shadow', 'none');
             $(this).addClass('active');
             ShowBigPopup($(this).data('place'));
-        });
+        });*/
     };
 </script>
 <!--footer scripts end-->

@@ -1,0 +1,674 @@
+{
+  "place_1": {
+    "status": "available",
+    "data_popup": {
+      "number": "1",
+      "level": "2",
+      "length": "5.9",
+      "width": "3.25",
+      "area": "19",
+      "price": "700000",
+      "size": "Большое место"
+    }
+  },
+  "place_2": {
+    "status": "available",
+    "data_popup": {
+      "number": "2",
+      "level": "2",
+      "length": "5.9",
+      "width": "3.25",
+      "area": "19",
+      "price": "700000",
+      "size": "Большое место"
+    }
+  },
+  "place_3": {
+    "status": "available",
+    "data_popup": {
+      "number": "3",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_4": {
+    "status": "available",
+    "data_popup": {
+      "number": "4",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_5": {
+    "status": "available",
+    "data_popup": {
+      "number": "5",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_6": {
+    "status": "available",
+    "data_popup": {
+      "number": "6",
+      "level": "2",
+      "length": "5.9",
+      "width": "2.8",
+      "area": "16.3",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_7": {
+    "status": "available",
+    "data_popup": {
+      "number": "7",
+      "level": "2",
+      "length": "5.08",
+      "width": "3.09",
+      "area": "13.8",
+      "price": "450000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_8": {
+    "status": "available",
+    "data_popup": {
+      "number": "8",
+      "level": "2",
+      "length": "5.08",
+      "width": "3.2",
+      "area": "16.1",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_9": {
+    "status": "available",
+    "data_popup": {
+      "number": "9",
+      "level": "2",
+      "length": "5.08",
+      "width": "3.26",
+      "area": "15.2",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_10": {
+    "status": "available",
+    "data_popup": {
+      "number": "10",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_11": {
+    "status": "available",
+    "data_popup": {
+      "number": "11",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_12": {
+    "status": "available",
+    "data_popup": {
+      "number": "12",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.79",
+      "area": "16.1",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_13": {
+    "status": "available",
+    "data_popup": {
+      "number": "13",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "650000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_14": {
+    "status": "available",
+    "data_popup": {
+      "number": "14",
+      "level": "3",
+      "length": "5.81",
+      "width": "3.69",
+      "area": "21.3",
+      "price": "700000",
+      "size": "Большое место"
+    }
+  },
+  "place_15": {
+    "status": "available",
+    "data_popup": {
+      "number": "15",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.81",
+      "area": "16.2",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_16": {
+    "status": "available",
+    "data_popup": {
+      "number": "16",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_17": {
+    "status": "available",
+    "data_popup": {
+      "number": "17",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.2",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_18": {
+    "status": "available",
+    "data_popup": {
+      "number": "18",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_19": {
+    "status": "available",
+    "data_popup": {
+      "number": "19",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_20": {
+    "status": "available",
+    "data_popup": {
+      "number": "20",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_21": {
+    "status": "available",
+    "data_popup": {
+      "number": "21",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.79",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_22": {
+    "status": "available",
+    "data_popup": {
+      "number": "22",
+      "level": "3",
+      "length": "5.8",
+      "width": "3.05",
+      "area": "17.4",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_23": {
+    "status": "available",
+    "data_popup": {
+      "number": "23",
+      "level": "3",
+      "length": "5.8",
+      "width": "3.05",
+      "area": "17.4",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_24": {
+    "status": "available",
+    "data_popup": {
+      "number": "24",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_25": {
+    "status": "available",
+    "data_popup": {
+      "number": "25",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_26": {
+    "status": "available",
+    "data_popup": {
+      "number": "26",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_27": {
+    "status": "available",
+    "data_popup": {
+      "number": "27",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_28": {
+    "status": "available",
+    "data_popup": {
+      "number": "28",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_29": {
+    "status": "available",
+    "data_popup": {
+      "number": "29",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_30": {
+    "status": "available",
+    "data_popup": {
+      "number": "30",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_31": {
+    "status": "available",
+    "data_popup": {
+      "number": "31",
+      "level": "3",
+      "length": "5.8",
+      "width": "3.04",
+      "area": "17.5",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_32": {
+    "status": "available",
+    "data_popup": {
+      "number": "32",
+      "level": "3",
+      "length": "5.8",
+      "width": "3.04",
+      "area": "17.5",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_33": {
+    "status": "available",
+    "data_popup": {
+      "number": "33",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_34": {
+    "status": "available",
+    "data_popup": {
+      "number": "34",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_35": {
+    "status": "available",
+    "data_popup": {
+      "number": "35",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_36": {
+    "status": "available",
+    "data_popup": {
+      "number": "36",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_37": {
+    "status": "available",
+    "data_popup": {
+      "number": "37",
+      "level": "3",
+      "length": "5.79",
+      "width": "3.26",
+      "area": "18.8",
+      "price": "570000",
+      "size": "Большое место"
+    }
+  },
+  "place_38": {
+    "status": "available",
+    "data_popup": {
+      "number": "38",
+      "level": "3",
+      "length": "5.79",
+      "width": "3.3",
+      "area": "19",
+      "price": "570000",
+      "size": "Большое место"
+    }
+  },
+  "place_39": {
+    "status": "available",
+    "data_popup": {
+      "number": "39",
+      "level": "3",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_40": {
+    "status": "available",
+    "data_popup": {
+      "number": "40",
+      "level": "3",
+      "length": "5.82",
+      "width": "2.81",
+      "area": "16.3",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_41": {
+    "status": "available",
+    "data_popup": {
+      "number": "41",
+      "level": "3",
+      "length": "4.76",
+      "width": "2.8",
+      "area": "13.3",
+      "price": "400000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_42": {
+    "status": "available",
+    "data_popup": {
+      "number": "42",
+      "level": "3",
+      "length": "4.74",
+      "width": "2.8",
+      "area": "13.2",
+      "price": "400000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_43": {
+    "status": "available",
+    "data_popup": {
+      "number": "43",
+      "level": "3",
+      "length": "5.79",
+      "width": "2.34",
+      "area": "13.5",
+      "price": "400000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_44": {
+    "status": "available",
+    "data_popup": {
+      "number": "44",
+      "level": "3",
+      "length": "5.79",
+      "width": "2.54",
+      "area": "14.6",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_45": {
+    "status": "available",
+    "data_popup": {
+      "number": "45",
+      "level": "3",
+      "length": "5.79",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_46": {
+    "status": "available",
+    "data_popup": {
+      "number": "46",
+      "level": "3",
+      "length": "5.79",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_47": {
+    "status": "available",
+    "data_popup": {
+      "number": "47",
+      "level": "3",
+      "length": "5.79",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_48": {
+    "status": "available",
+    "data_popup": {
+      "number": "48",
+      "level": "3",
+      "length": "5.79",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_49": {
+    "status": "available",
+    "data_popup": {
+      "number": "49",
+      "level": "3",
+      "length": "5.79",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "550000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_112": {
+    "status": "available",
+    "data_popup": {
+      "number": "112",
+      "level": "4",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "450000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_113": {
+    "status": "available",
+    "data_popup": {
+      "number": "113",
+      "level": "4",
+      "length": "5.8",
+      "width": "2.81",
+      "area": "16.1",
+      "price": "450000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_114": {
+    "status": "available",
+    "data_popup": {
+      "number": "114",
+      "level": "4",
+      "length": "5.8",
+      "width": "2.79",
+      "area": "16.1",
+      "price": "450000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_214": {
+    "status": "available",
+    "data_popup": {
+      "number": "214",
+      "level": "5",
+      "length": "5.8",
+      "width": "2.79",
+      "area": "16.1",
+      "price": "350000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_215": {
+    "status": "available",
+    "data_popup": {
+      "number": "215",
+      "level": "5",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "350000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_216": {
+    "status": "available",
+    "data_popup": {
+      "number": "216",
+      "level": "5",
+      "length": "5.8",
+      "width": "2.79",
+      "area": "16.1",
+      "price": "350000",
+      "size": "Стандартное место"
+    }
+  },
+  "place_217": {
+    "status": "available",
+    "data_popup": {
+      "number": "217",
+      "level": "5",
+      "length": "5.8",
+      "width": "2.8",
+      "area": "16.1",
+      "price": "350000",
+      "size": "Стандартное место"
+    }
+  }
+}
