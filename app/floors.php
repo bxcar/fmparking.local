@@ -8,6 +8,13 @@
     <link rel="icon" href="img/favicon.png"/>
     <title>Этажи - FM Parking</title>
 
+    <script>
+        const vw_check = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        if(vw_check < 1280) {
+            window.location.href = './filter-m.php';
+        }
+    </script>
+
     <!--header styles start-->
 <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>-->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
