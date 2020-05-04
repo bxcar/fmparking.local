@@ -39,7 +39,7 @@ html, body {
 }
 
 .container {
-    width: 320px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -137,7 +137,6 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 320px;
     margin-bottom: 38px;
 }
 
@@ -190,6 +189,9 @@ html, body {
     padding: 26px 10px 32px 10px;
     border-radius: 10px;
     width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
     box-sizing: border-box;
     margin-bottom: 30px;
 }
@@ -233,7 +235,7 @@ html, body {
 
 /*filter*/
 .filter {
-    width: 320px;
+    width: 100%;
     height: auto;
     padding-left: 12px;
     padding-right: 12px;
@@ -335,6 +337,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 320px;
 }
 
 .filter__floors-floor {
@@ -645,8 +648,17 @@ html, body {
 .filter__places-list-item-column:first-child {
     align-items: flex-start;
 }
+.filter__places-list-item-column:nth-child(1) {
+    width: 62px;
+}
+
+
 .filter__places-list-item-column:nth-child(2) {
     width: 121px;
+}
+
+.filter__places-list-item-column:nth-child(3) {
+    width: 84px;
 }
 
 .filter__places-list-item-number,
@@ -690,8 +702,9 @@ html, body {
     padding-top: 8px;
     padding-bottom: 8px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-bottom: 30px;
+    /*padding-left: 45px;*/
 }
 
 .place-img__first-block {
@@ -709,7 +722,8 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-right: 85px;
+    /*padding-right: 85px;*/
+    padding-right: 30px;
 }
 
 .place-img__first-block-number span:first-child,
@@ -732,6 +746,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: 320px;
 }
 
 .place-sizes__item {
@@ -826,12 +841,17 @@ html, body {
     background: #fff;
     z-index: 3;
     padding-top: 30px;
-    width: 320px;
+    /*width: 320px;*/
+    width: 100%;
     margin-left: -12px;
     padding-left: 12px;
     padding-right: 12px;
     box-sizing: border-box;
     display: none;
+}
+
+.hamburger-menu .main__sales-start-notice {
+    margin-left: 0;
 }
 
 .hamburger-menu__top-link {
@@ -914,12 +934,14 @@ html, body {
 /*contact form*/
 .contact-form {
     position: fixed;
-    width: 320px;
+    /*width: 320px;*/
+    width: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
     display: none;
+    background: #fff;
 }
 
 .contact-from__input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -943,6 +965,9 @@ html, body {
     position: relative;
     box-sizing: border-box;
     padding-bottom: 8px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-from__title {
@@ -971,9 +996,12 @@ html, body {
 .contact-from__form {
     padding-left: 12px;
     padding-right: 12px;
-    padding-bottom: calc(100vh - 500px);
+    padding-bottom: calc(100vh - 400px);
     box-sizing: border-box;
     background: #fff;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .contact-from__form--thanks {
     display: flex;
@@ -982,7 +1010,8 @@ html, body {
     justify-content: center;
     padding-left: 12px;
     padding-right: 12px;
-    padding-bottom: calc(100vh - 516px);;
+    /*padding-bottom: calc(100vh - 516px);;*/
+    padding-bottom: calc(100vh - 400px);;
 }
 
 .contact-from__form--thanks img {
