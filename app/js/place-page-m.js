@@ -11,7 +11,7 @@ $(document).ready(function () {
         $(".hamburger-menu").animate({width: 'toggle'}, 320);
     });
 
-    $.getJSON("/app/places_data.json", function (data) {
+    $.getJSON("./places_data.json", function (data) {
         map_json = data;
 
         var url_string = window.location.href; //window.location.href
@@ -83,7 +83,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         var form = $(this);
-        var url = '/app/send.php';
+        var url = './send.php';
 
         $.ajax({
             type: "POST",
@@ -107,7 +107,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         var form = $(this);
-        var url = '/app/send.php';
+        var url = './send.php';
 
         $.ajax({
             type: "POST",

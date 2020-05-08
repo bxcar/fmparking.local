@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 
     var map_json;
-    $.getJSON("/app/places_data.json", function (data) {
+    $.getJSON("./places_data.json", function (data) {
         map_json = data;
 
         var url_file = window.location.pathname;

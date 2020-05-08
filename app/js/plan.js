@@ -41,7 +41,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         var form = $(this);
-        var url = '/app/send.php';
+        var url = './send.php';
 
         $.ajax({
             type: "POST",
@@ -63,7 +63,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         var form = $(this);
-        var url = '/app/send.php';
+        var url = './send.php';
 
         $.ajax({
             type: "POST",
@@ -83,7 +83,7 @@ $(document).ready(function () {
 });
 
 function plan() {
-    $.getJSON("/app/places_data.json", function (data) {
+    $.getJSON("./places_data.json", function (data) {
         map_json = data;
 
         $(".plan__image svg > .st0-st0").on("mouseenter", function (event) {
@@ -278,7 +278,7 @@ function ChangeFloor(level) {
 }
 
 function ShowBigPopup(place_number) {
-    $.getJSON("/app/places_data.json", function (data) {
+    $.getJSON("./places_data.json", function (data) {
         var map_json = data;
         var data_place = 'place_' + place_number;
         var select = $('.plcpu-full');

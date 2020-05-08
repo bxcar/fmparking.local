@@ -21,7 +21,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         var form = $(this);
-        var url = '/app/send.php';
+        var url = './send.php';
 
         $.ajax({
             type: "POST",
