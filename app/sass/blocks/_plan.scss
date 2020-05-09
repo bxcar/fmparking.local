@@ -178,7 +178,8 @@
 .plcpu-short {
   width: 340px;
   height: 323px;
-  display: none;
+  //display: none;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -272,6 +273,7 @@
   font-size: 43px;
   line-height: 1.2em;
   color: #69bc48;
+  white-space: nowrap;
 }
 
 .plcpu-full__first-sizes {
@@ -849,12 +851,19 @@
     transform: translate(-50%, -50%) scale(0.95);
   }
 
+  .plcpu-short {
+    transform: scale(0.95);
+  }
 }
 
 @media (max-width: 1750px) {
   .plcpu-full,
   .contact-form {
     transform: translate(-50%, -50%) scale(0.8);
+  }
+
+  .plcpu-short {
+    transform: scale(0.8);
   }
 }
 
@@ -872,12 +881,20 @@
     transform: translate(-50%, -50%) scale(0.75);
   }
 
+  .plcpu-short {
+    transform: scale(0.75);
+  }
+
 }
 
 @media (max-width: 1500px) {
   .plcpu-full,
   .contact-form {
     transform: translate(-50%, -50%) scale(0.7);
+  }
+
+  .plcpu-short {
+    transform: scale(0.7);
   }
 }
 
@@ -901,11 +918,19 @@
   .contact-form {
     transform: translate(-50%, -50%) scale(0.6);
   }
+
+  .plcpu-short {
+    transform: scale(0.6);
+  }
 }
 
 @media (max-width: 1300px) {
   .plcpu-full,
   .contact-form {
     transform: translate(-50%, -50%) scale(0.55);
+  }
+
+  .plcpu-short {
+    transform: scale(0.55);
   }
 }

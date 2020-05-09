@@ -1,3 +1,6 @@
+var plcpu_short_width;
+var plcpu_short_height;
+
 $(document).ready(function () {
 
     var url_string = window.location.href; //window.location.href
@@ -83,6 +86,14 @@ $(document).ready(function () {
 });
 
 function plan() {
+
+    if(!plcpu_short_width && !plcpu_short_height) {
+        plcpu_short_width = $(".plcpu-short")[0].getBoundingClientRect().width;
+        plcpu_short_height = $(".plcpu-short")[0].getBoundingClientRect().height;
+    }
+
+    $(".plcpu-short").css('display' , 'none').css('visibility' , 'visible');
+
     $.getJSON("./places_data.json", function (data) {
         map_json = data;
 
@@ -131,18 +142,47 @@ function plan() {
                 });
             }
 
-            $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
+            /*$(".plcpu-short").css('display', 'block').css('left', position.left + (plcpu_short_width/5)).css('top', position.top - (plcpu_short_height/3));*/
             // $(".plcpu-short").fadeIn(150).css('left', position.left + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
 
 
-            if ((position.top < 360) && position.left > 1440) {
+            /*if ((position.top < 360) && position.left > 1440) {
                 $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + 330 + $(this).height() - 313);
             } else if (position.left > 1440) {
                 $(".plcpu-short").css('display', 'block').css('left', 1440 + $(this).width() + 35).css('top', position.top + $(this).height() - 313);
             } else if (position.top < 308) {
                 $(".plcpu-short").css('display', 'block').css('left', position.left + $(this).width() + 35).css('top', 308 + $(this).height() - 313);
+            }*/
+
+            if($( window ).width() > 1440) {
+                $(".plcpu-short").css('display', 'block').css('left', position.left + (plcpu_short_width/5)).css('top', position.top - (plcpu_short_height/3));
+
+
+                var left_max_position = $( window ).width() - plcpu_short_width - (plcpu_short_width/3);
+                var top_max_position = plcpu_short_height;
+                if ((position.top < top_max_position) && (position.left > left_max_position)) {
+                    $(".plcpu-short").css('display', 'block').css('left', left_max_position).css('top', position.top + (plcpu_short_height/5));
+                } else if (position.left > left_max_position) {
+                    $(".plcpu-short").css('display', 'block').css('left', left_max_position).css('top', position.top + (plcpu_short_height/5));
+                } else if (position.top < top_max_position) {
+                    $(".plcpu-short").css('display', 'block').css('left', position.left +  (plcpu_short_width/5)).css('top', position.top);
+                }
+            } else {
+                $(".plcpu-short").css('display', 'block').css('left', position.left + (plcpu_short_width/15)).css('top', position.top - (plcpu_short_height/2));
+
+                var left_max_position = $( window ).width() - plcpu_short_width - (plcpu_short_width/2);
+                var top_max_position = plcpu_short_height;
+                if ((position.top < top_max_position) && (position.left > left_max_position)) {
+                    $(".plcpu-short").css('display', 'block').css('left', left_max_position).css('top', position.top + (plcpu_short_height/10));
+                } else if (position.left > left_max_position) {
+                    $(".plcpu-short").css('display', 'block').css('left', left_max_position).css('top', position.top + (plcpu_short_height/10));
+                } else if (position.top < top_max_position) {
+                    $(".plcpu-short").css('display', 'block').css('left', position.left +  (plcpu_short_width/7)).css('top', position.top - (plcpu_short_height/3));
+                }
             }
+
         });
+
 
         $(".plan__image svg").on("DOMNodeInserted", function (event) {
 
